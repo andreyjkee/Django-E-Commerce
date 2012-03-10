@@ -1,0 +1,4 @@
+<h3>Categories</h3>
+{% for c in active_categories %}
+	<a href="{{ c.get_absolute_url }}">{{ c.name }}</a><br />
+{% endfor %}
