@@ -1,13 +1,14 @@
 {% extends "catalog.html" %}
+{% load i18n %}
 
 {% block content %}
 	<div class="product_image">
-		<img src="{{ STATIC_URL }}images/products/main/{{  p.image }}" alt="{{ p.name }}" />
+		<img src="{{ STATIC_URL }}images/products/main/{{ p.image }}" alt="{{ p.name }}" />
 	</div>
 	<h1>{{ p.name }}</h1>
-	Brand: <em>{{ p.brand }}</em>
+	{% trans "Brand" %}: <em>{{ p.brand }}</em>
 	<br /><br />
-	SKU: {{ p.sku }}
+	{% trans "SKU" %}: {{ p.sku }}
 	<br />
 	In categor{{ categories.count|pluralize:"y,ies" }}:
 		{% for c in categories %}
@@ -16,16 +17,16 @@
 		{% endfor %}
 	<br /><br />
 	{% if p.sale_price %}
-		Was: <del>$ {{ p.old_price }}</del>
+		{% trans "Was" %}: <del>$ {{ p.old_price }}</del>
 		<br />
-		Now: $ {{ p.price }}
+		{% trans "Now" %}: {{ p.price }}
 	{% else %}
-		Price: $ {{ p.price}}
+		{% trans "Price" %}: $ {{ p.price}}
 	{% endif %}
 	<br /><br />
 	[add to cart button]
 	<br /><br />
 	<div class="cb"><br /><br /></div>
-	<h3>Product Description</h3>
-		{{ p.description }}	
+	<h3>{% trans "Product Description" %}</h3>
+		{{ p.description }}
 {% endblock %}

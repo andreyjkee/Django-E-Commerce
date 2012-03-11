@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 from django.contrib import admin
-from webshop.catalog.models import Product, Category
+
 from webshop.catalog.forms import ProductAdminForm
+from webshop.catalog.models import Product, Category
+
 
 class ProductAdmin(admin.ModelAdmin):
+	"""Управление товарами"""
 	form = ProductAdminForm
 	# Как будут отображаться поля продуктов в разделе администрирования
 	list_display = ('name', 'price', 'old_price', 'created_at', 'updated_at',)
@@ -14,10 +17,11 @@ class ProductAdmin(admin.ModelAdmin):
 	search_field = ['name', 'description', 'meta_keywords', 'meta_description']
 	# exclude = ('created_at', 'updated_at',)
 	readonly_fields = ('created_at', 'updated_at',)
-	# ленивая ссылка генерируюася из имени продукта
+	# имя продукта для генерации ленивой ссылки
 	prepopulated_fields = {'slug': ('name',)}
 
 class CategoryAdmin(admin.ModelAdmin):
+	"""Управление категориями"""
 	# Как будут отображаться поля категорий в разделе администрирования
 	list_display = ('name', 'created_at', 'updated_at',)
 	list_display_links = ('name',)

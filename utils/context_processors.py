@@ -4,7 +4,7 @@ from webshop import settings
 from webshop.catalog.models import Category
 
 def webshop(request):
-	'''Контекст процессор для использования в шаблонах'''
+	"""Контекст процессор для использования в шаблонах"""
 	return {
 			'active_categories': Category.objects.filter(is_active=True),
 			'site_name': settings.SITE_NAME,

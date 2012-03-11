@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-11 16:55+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: .\settings.py:49
+msgid "English"
+msgstr ""
+
+#: .\settings.py:50
+msgid "Russian"
+msgstr ""
+
+#: .\settings.py:185
+msgid "Product magazine"
+msgstr ""
+
+#: .\settings.py:186
+msgid "products, online, shop, buy"
+msgstr ""
+
+#: .\settings.py:187
+msgid "Product magazine is an online supplier of products"
+msgstr ""
+
+#: .\catalog\forms.py:18
+msgid "Price must be greater than zero."
+msgstr ""
+
+#: .\catalog\models.py:9 .\catalog\models.py:39
+msgid "Name"
+msgstr ""
+
+#: .\catalog\models.py:10 .\catalog\models.py:40
+msgid "Slug"
+msgstr ""
+
+#: .\catalog\models.py:11
+msgid "Slug for product url, created from name."
+msgstr ""
+
+#: .\catalog\models.py:13 .\catalog\models.py:53
+msgid "Description"
+msgstr ""
+
+#: .\catalog\models.py:14 .\catalog\models.py:49
+msgid "Active"
+msgstr ""
+
+#: .\catalog\models.py:15 .\catalog\models.py:54
+msgid "Meta keywords"
+msgstr ""
+
+#: .\catalog\models.py:16 .\catalog\models.py:55
+msgid "Comma-delimited set of SEO keywords for meta tag"
+msgstr ""
+
+#: .\catalog\models.py:18 .\catalog\models.py:56
+msgid "Meta description"
+msgstr ""
+
+#: .\catalog\models.py:19
+msgid "Content for description meta tags"
+msgstr ""
+
+#: .\catalog\models.py:20 .\catalog\models.py:58
+msgid "Created at"
+msgstr ""
+
+#: .\catalog\models.py:21 .\catalog\models.py:59
+msgid "Updated at"
+msgstr ""
+
+#: .\catalog\models.py:26 .\catalog\models.py:60
+#: .\templates\tags\category_list.html.py:3
+msgid "Categories"
+msgstr ""
+
+#: .\catalog\models.py:41
+msgid "Unique value for product page URL, created from name."
+msgstr ""
+
+#: .\catalog\models.py:42 .\templates\catalog\product.html.py:9
+msgid "Brand"
+msgstr ""
+
+#: .\catalog\models.py:43 .\templates\catalog\product.html.py:11
+msgid "SKU"
+msgstr ""
+
+#: .\catalog\models.py:44
+msgid "Stock-keeping unit"
+msgstr ""
+
+#: .\catalog\models.py:48
+msgid "Image"
+msgstr ""
+
+#: .\catalog\models.py:50
+msgid "Bestseller"
+msgstr ""
+
+#: .\catalog\models.py:51
+msgid "Featured"
+msgstr ""
+
+#: .\catalog\models.py:52
+msgid "Quantity"
+msgstr ""
+
+#: .\catalog\models.py:57
+msgid "Content for description meta tag"
+msgstr ""
+
+#: .\catalog\models.py:61
+msgid "Categories for product"
+msgstr ""
+
+#: .\catalog\models.py:66 .\templates\tags\navigation.html.py:6
+msgid "Products"
+msgstr ""
+
+#: .\catalog\views.py:12
+msgid "Internet Magazine"
+msgstr ""
+
+#: .\templates\catalog.html.py:6
+msgid "Skip to main content"
+msgstr ""
+
+#: .\templates\catalog.html.py:12
+msgid "Internet magazine"
+msgstr ""
+
+#: .\templates\index.html.py:5
+msgid "Welcome!"
+msgstr ""
+
+#: .\templates\catalog\index.html.py:5
+msgid "Welcome to our shop!"
+msgstr ""
+
+#: .\templates\catalog\product.html.py:13
+msgid "In category"
+msgid_plural "In categories"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: .\templates\catalog\product.html.py:20
+msgid "Was"
+msgstr ""
+
+#: .\templates\catalog\product.html.py:22
+msgid "Now"
+msgstr ""
+
+#: .\templates\catalog\product.html.py:24
+msgid "Price"
+msgstr ""
+
+#: .\templates\catalog\product.html.py:30
+msgid "Product Description"
+msgstr ""
+
+#: .\templates\tags\navigation.html.py:3
+msgid "Home"
+msgstr ""
+
+#: .\templates\tags\navigation.html.py:4
+msgid "About"
+msgstr ""
+
+#: .\templates\tags\navigation.html.py:5
+msgid "Privacy"
+msgstr ""
+
+#: .\templates\tags\navigation.html.py:7
+msgid "Contact"
+msgstr ""
