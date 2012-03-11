@@ -10,7 +10,11 @@
 	<br /><br />
 	{% trans "SKU" %}: {{ p.sku }}
 	<br />
-	In categor{{ categories.count|pluralize:"y,ies" }}:
+	{% blocktrans count counter=categories|length %}
+		In category:
+		{% plural %}
+		In categories:
+	{% endblocktrans %}
 		{% for c in categories %}
 			<a href="{{ c.get.absolute_url }}">{{ c.name }}</a>
 			{% if not forloop.last %}, {% endif %}
