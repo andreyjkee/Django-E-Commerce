@@ -60,7 +60,7 @@ msgstr ""
 
 #: .\catalog\models.py:14 .\catalog\models.py:49
 msgid "Active"
-msgstr ""
+msgstr "Активный"
 
 #: .\catalog\models.py:15 .\catalog\models.py:54
 msgid "Meta keywords"
@@ -80,11 +80,11 @@ msgstr ""
 
 #: .\catalog\models.py:20 .\catalog\models.py:58
 msgid "Created at"
-msgstr ""
+msgstr "Создан"
 
 #: .\catalog\models.py:21 .\catalog\models.py:59
 msgid "Updated at"
-msgstr ""
+msgstr "Обновлен"
 
 #: .\catalog\models.py:26 .\catalog\models.py:60
 #: .\templates\tags\category_list.html.py:3
