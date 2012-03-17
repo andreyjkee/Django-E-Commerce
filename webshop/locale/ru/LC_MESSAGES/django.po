@@ -113,7 +113,7 @@ msgstr ""
 
 #: .\catalog\models.py:50
 msgid "Bestseller"
-msgstr ""
+msgstr "Лучшие продажи"
 
 #: .\catalog\models.py:51
 msgid "Featured"
