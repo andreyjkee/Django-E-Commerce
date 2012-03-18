@@ -2,14 +2,14 @@
 #!/usr/bin/env python
 from django.contrib import admin
 
-from webshop.catalog.forms import ProductAdminForm
-from webshop.catalog.models import Product, Category
+from forms import ProductAdminForm
+from models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
-	"""Управление товарами"""
+	"""Управление товарами
+	Как будут отображаться поля товаров в разделе администрирования"""
 	form = ProductAdminForm
-	# Как будут отображаться поля продуктов в разделе администрирования
 	list_display = ('name', 'price', 'old_price', 'created_at', 'updated_at',)
 	list_display_links = ('name',)
 	list_per_page = 50
@@ -21,8 +21,8 @@ class ProductAdmin(admin.ModelAdmin):
 	prepopulated_fields = {'slug': ('name',)}
 
 class CategoryAdmin(admin.ModelAdmin):
-	"""Управление категориями"""
-	# Как будут отображаться поля категорий в разделе администрирования
+	"""Управление категориями
+	Как будут отображаться поля категорий в разделе администрирования"""
 	list_display = ('name', 'created_at', 'updated_at',)
 	list_display_links = ('name',)
 	list_per_page = 20
@@ -32,6 +32,6 @@ class CategoryAdmin(admin.ModelAdmin):
 	# exclude = ('created_at', 'updated_at',)
 	prepopulated_fields = {'slug': ('name',)}
 
-# Регистрирацмя моделей в админке
+# Регистрирация моделей в админке
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
