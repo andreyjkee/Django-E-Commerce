@@ -3,12 +3,11 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from webshop.catalog.models import Product
+from models import Product
 
 
 class ProductAdminForm(forms.ModelForm):
 	"""Форма для управления товаром"""
-	
 	class Meta:
 		model = Product
 
