@@ -89,7 +89,7 @@ msgstr ""
 #: .\catalog\models.py:26 .\catalog\models.py:60
 #: .\templates\tags\category_list.html.py:3
 msgid "Categories"
-msgstr ""
+msgstr "Категории"
 
 #: .\catalog\models.py:41
 msgid "Unique value for product page URL, created from name."
