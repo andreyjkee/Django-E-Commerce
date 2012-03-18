@@ -6,7 +6,7 @@ from django.core import urlresolvers
 from django.test import TestCase
 from django.test.client import Client
 
-from models import Category
+from models import Category, Product
 
 
 class CatalogTest(TestCase):
@@ -31,3 +31,12 @@ class CatalogTest(TestCase):
 		self.failUnless(response)
 		self.assertEqual(response.status_code, httplib.OK)
 		# self.assertEqual(Category.objects.all().count(), 0)
+
+	def test_view_product(self):
+		"""Тестирование доступности просмотра категории"""
+		product = Product.objects.all()[0]
+		product_url = product.get_absolute_url()
+		response = self.client.get(product_url)
+		self.failUnless(response)
+		self.assertEqual(response.status_code, httplib.OK)
+	# self.assertEqual(Category.objects.all().count(), 0)
