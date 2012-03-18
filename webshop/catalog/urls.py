@@ -7,14 +7,14 @@ urlpatterns = patterns('catalog.views',
 	# Главная страница
 	url(r'^$', 'index_view',
 		{'template_name':'catalog/index.html'},
-		'catalog_home'),
+		name='catalog_home'),
 	# Просмотр категории
 	url(r'^category/(?P<category_slug>[-\w]+)/$', 'category_view',
 		{'template_name':'catalog/category.html'},
-		'catalog_category'),
+		name='catalog_category'),
 	# Просмотр товара
 	url(r'^product/(?P<product_slug>[-\w]+)/$', 'product_view',
 		{'template_name':'catalog/product.html'},
-		'catalog_product'),
+		name='catalog_product'),
 
 )

@@ -14,7 +14,7 @@ def index_view(request, template_name="catalog/index.html"):
 	return render_to_response(template_name, locals(), 
 		context_instance=RequestContext(request))
 	
-def show_category_view(request, category_slug, template_name="catalog/category.html"):
+def category_view(request, category_slug, template_name="catalog/category.html"):
 	"""Представление для просмотра конкретной категории"""
 	c = get_object_or_404(Category, slug=category_slug)
 	products = c.product_set.all()
@@ -24,7 +24,7 @@ def show_category_view(request, category_slug, template_name="catalog/category.h
 	return render_to_response(template_name, locals(), 
 		context_instance=RequestContext(request))
 	
-def show_product_view(request, product_slug, template_name="catalog/product.html"):
+def product_view(request, product_slug, template_name="catalog/product.html"):
 	"""Представление для просмотра конкретного продукта"""
 	p = get_object_or_404(Product, slug=product_slug)
 	categories = p.categories.filter(is_active=True)
