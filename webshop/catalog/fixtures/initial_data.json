@@ -1,0 +1,81 @@
+[
+  {
+    "pk": 2, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "fsafa", 
+      "meta_keywords": "sfasaf", 
+      "description": "safasfasf", 
+      "created_at": "2012-03-11 22:05:14", 
+      "is_active": true, 
+      "updated_at": "2012-03-11 22:05:14", 
+      "slug": "2", 
+      "name": "2"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "phones", 
+      "meta_keywords": "phone", 
+      "description": "tlephones", 
+      "created_at": "2012-03-11 16:59:31", 
+      "is_active": true, 
+      "updated_at": "2012-03-11 16:59:31", 
+      "slug": "phones", 
+      "name": "Phones"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "catalog.product", 
+    "fields": {
+      "sku": "111", 
+      "meta_description": "dsgsdg", 
+      "is_featured": false, 
+      "meta_keywords": "dggsd", 
+      "name": "fasfasf", 
+      "is_active": true, 
+      "brand": "afsfafsaf", 
+      "description": "dsfdsfds", 
+      "old_price": "0", 
+      "updated_at": "2012-03-18 17:33:32", 
+      "slug": "fasfasf", 
+      "is_bestseller": false, 
+      "image": "sdfsdf.jph", 
+      "created_at": "2012-03-18 17:33:32", 
+      "price": "1", 
+      "categories": [
+        2
+      ], 
+      "quantity": 34324
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "catalog.product", 
+    "fields": {
+      "sku": "11", 
+      "meta_description": "ada", 
+      "is_featured": false, 
+      "meta_keywords": "asda", 
+      "name": "iphone", 
+      "is_active": true, 
+      "brand": "apple", 
+      "description": "sadasdasd", 
+      "old_price": "0", 
+      "updated_at": "2012-03-11 22:05:22", 
+      "slug": "iphone", 
+      "is_bestseller": true, 
+      "image": "123.jpg", 
+      "created_at": "2012-03-11 17:00:26", 
+      "price": "1111", 
+      "categories": [
+        2, 
+        1
+      ], 
+      "quantity": 11
+    }
+  }
+]
