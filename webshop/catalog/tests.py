@@ -39,4 +39,4 @@ class CatalogTest(TestCase):
 		response = self.client.get(product_url)
 		self.failUnless(response)
 		self.assertEqual(response.status_code, httplib.OK)
-	# self.assertEqual(Category.objects.all().count(), 0)
+		# self.assertEqual(Category.objects.all().count(), 0)
