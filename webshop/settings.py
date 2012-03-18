@@ -23,6 +23,7 @@ DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 		'NAME': os.path.join(PROJECT_PATH, 'database/shopapp.sq3'),                      # Or path to database file if using sqlite3.
+		'TEST_NAME': os.path.join(PROJECT_PATH, 'database/test_shopapp.sq3'),
 		'USER': '',                      # Not used with sqlite3.
 		'PASSWORD': '',                  # Not used with sqlite3.
 		'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
