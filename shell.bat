@@ -1,0 +1,1 @@
+python webshop/manage.py shell
