@@ -1,4 +1,5 @@
-# Django settings for webshop project.
+# -*- coding: utf-8 -*-
+#!/usr/bin/env python
 import os
 
 from django.utils.translation import ugettext_lazy as _
@@ -120,6 +121,7 @@ MIDDLEWARE_CLASSES = (
 	'django.middleware.csrf.CsrfViewMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
+	'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'webshop.urls'
@@ -152,10 +154,11 @@ INSTALLED_APPS = (
 	'django.contrib.sites',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
+	'django.contrib.flatpages',
+	'webshop.catalog',
+	'webshop.cart',
 	# Uncomment the next line to enable the admin:
 	'django.contrib.admin',
-	'webshop.catalog',
-	'webshop.utils',
 	# Uncomment the next line to enable admin documentation:
 	# 'django.contrib.admindocs',
 )
@@ -188,3 +191,4 @@ SITE_NAME = _(u'Product magazine')
 META_KEYWORDS = _(u'products, online, shop, buy')
 META_DESCRIPTION = _(u'Product magazine is an online supplier of products')
 LOGIN_REDIRECT_URL = '/accounts/my_account/'
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 90 # 90 дней на хранение cookies

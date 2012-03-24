@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css.css" />
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/css.css" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}{% endblock %}</title>
 	<meta name="keywords" content="{{ meta_keywords }}" />
@@ -11,7 +11,6 @@
 	{% load i18n %}
 	{% load settings_webstore %}
 	{% block site_wrapper %}{% endblock %}
-	
 	{% get_setting "MIDDLEWARE_CLASSES" as middleware_classes %}
 	{% if "django.middleware.locale.LocaleMiddleware" in middleware_classes %}
 		<form action="{% url set_language %}" method="post">{% csrf_token %}

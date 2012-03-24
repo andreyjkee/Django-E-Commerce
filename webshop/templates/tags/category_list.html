@@ -1,6 +1,16 @@
 {% load i18n %}
 
 <h3>{% trans "Categories" %}</h3>
-{% for c in active_categories %}
-	<a href="{{ c.get_absolute_url }}">{{ c.name }}</a><br />
-{% endfor %}
+<ul id="categories">
+{% with active_categories as cats %}
+	{% for c in cats %}
+		<li>
+			{% ifequal c.get_absolute_url request_path %}
+				{{ c.name }}<br />
+			{% else %}
+				<a href="{{ c.get_absolute_url }}" class="category">{{ c.name }}</a><br />
+			{% endifequal %}
+		</li>
+	{% endfor %}
+{% endwith %}
+</ul>

@@ -1,5 +1,6 @@
 {% extends "catalog.html" %}
 {% load i18n %}
+{% load catalog_filters %}
 
 {% block content %}
 	<div class="product_image">
@@ -10,25 +11,31 @@
 	<br /><br />
 	{% trans "SKU" %}: {{ p.sku }}
 	<br />
+	{# Переписать V #}
 	{% blocktrans count counter=categories|length %}
 		In category:
 		{% plural %}
 		In categories:
 	{% endblocktrans %}
 		{% for c in categories %}
-			<a href="{{ c.get.absolute_url }}">{{ c.name }}</a>
+			<a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
 			{% if not forloop.last %}, {% endif %}
 		{% endfor %}
 	<br /><br />
 	{% if p.sale_price %}
-		{% trans "Was" %}: <del>$ {{ p.old_price }}</del>
+		{% trans "Was" %}: $ {{ p.old_price }}
 		<br />
-		{% trans "Now" %}: {{ p.price }}
+		{% trans "Now" %}: $ {{ p.price }}
 	{% else %}
-		{% trans "Price" %}: $ {{ p.price}}
+		{% trans "Price" %}: $ {{ p.price }}
 	{% endif %}
 	<br /><br />
-	[add to cart button]
+		<form method="post" action="." class="cart">{% csrf_token %}
+			{{ form.as_p }}
+		<br />
+		<input type="submit" value="{% trans "Add To Cart" %}" name="submit" alt="{% trans "Add To Cart" %}" />
+		</form>
+		<div class="cb"></div>
 	<br /><br />
 	<div class="cb"><br /><br /></div>
 	<h3>{% trans "Product Description" %}</h3>

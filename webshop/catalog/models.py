@@ -5,12 +5,11 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Category(models.Model):
-	"""Класс для категорий товаров"""
-
+	"Класс для категорий товаров"
 	name = models.CharField(_(u'Name'), max_length=50, unique=True)
 	slug = models.SlugField(_(u'Slug'), max_length=50, unique=True,
 		help_text=_(u'Slug for product url created from name.'))
-	# "Ленивые" ссылки для продуктов формирующиеся из названия
+	# "Чистые" ссылки для продуктов формирующиеся из названия
 	description = models.TextField(_(u'Description'))
 	is_active = models.BooleanField(_(u'Active'), default=True)
 	meta_keywords = models.CharField(_(u'Meta keywords'), max_length=255,
@@ -31,12 +30,12 @@ class Category(models.Model):
 	
 	@models.permalink
 	def get_absolute_url(self):
-		"""Генерация постоянных ссылок на категории"""
+		"Генерация постоянных ссылок на категории"
 		return ('catalog_category', (), {'category_slug': self.slug})
 
-class Product(models.Model):
-	"""Класс для товаров"""
 
+class Product(models.Model):
+	"Класс для товаров"
 	name = models.CharField(_(u'Name'), max_length=255, unique=True)
 	slug = models.SlugField(_(u'Slug'), max_length=255, unique=True,
 		help_text=_(u'Unique value for product page URL, created from name.'))
@@ -49,7 +48,7 @@ class Product(models.Model):
 	image = models.CharField(_(u'Image'), max_length=50)
 	is_active = models.BooleanField(_(u'Active'), default=True)
 	is_bestseller = models.BooleanField(_(u'Bestseller'), default=False) # Лучшие продажи
-	is_featured = models.BooleanField(_(u'Featured'), default=False) # Продвигаемый
+	is_featured = models.BooleanField(_(u'Featured'), default=False) # Отображать на главной
 	quantity = models.IntegerField(_(u'Quantity'))
 	description = models.TextField(_(u'Description'))
 	meta_keywords = models.CharField(_(u'Meta keywords'), max_length=255,
@@ -71,11 +70,13 @@ class Product(models.Model):
 
 	@models.permalink
 	def get_absolute_url(self):
-		"""Генерация постоянных ссылок на товары"""
+		"Генерация постоянных ссылок на товары"
 		return ('catalog_product', (), {'product_slug': self.slug})
 
+	@property
 	def sale_price(self):
-		"""Метод возвращает старую цену товара
+		"""
+		Метод возвращает старую цену товара
 		будет использоваться в шаблонах для отображения
 		старой цены под текущей
 		"""

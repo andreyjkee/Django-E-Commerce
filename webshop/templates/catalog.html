@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load catalog_tags %}
 
 {% block site_wrapper %}
 	<div id="main">
@@ -7,9 +8,9 @@
 		<div id="banner">
 			<div class="bannerIEPadder">
 				<div class="cart_box">
-					[link to cart here]
+					{% cart_box request %}
 				</div>
-				{% trans "Internet magazine" %}
+				<a href="{% url catalog_home %}">{% trans "Internet magazine" %}</a>
 			</div>
 		</div>
 		<div id="navigation">
@@ -22,7 +23,7 @@
 				<div class="sidebarIEPadder">
 					[search box here]
 					<br />
-					{% include "tags/category_list.html" %}
+					{% category_list request.path %}
 				</div>
 			</div>
 			<div id="content">
@@ -34,7 +35,7 @@
 		</div>
 		<div id="footer">
 			<div class="footerIEPadder">
-				[footer here]
+				{% footer_links %}
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-11 16:53+0400\n"
+"POT-Creation-Date: 2012-03-22 11:04+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,124 +16,140 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\settings.py:46
+#: .\settings.py:51
 msgid "English"
 msgstr ""
 
-#: .\settings.py:47
+#: .\settings.py:52
 msgid "Russian"
 msgstr ""
 
-#: .\settings.py:182
+#: .\settings.py:188
 msgid "Product magazine"
 msgstr ""
 
-#: .\settings.py:183
+#: .\settings.py:189
 msgid "products, online, shop, buy"
 msgstr ""
 
-#: .\settings.py:184
+#: .\settings.py:190
 msgid "Product magazine is an online supplier of products"
+msgstr ""
+
+#: .\views.py:10
+msgid "Page Not Found"
+msgstr ""
+
+#: .\cart\views.py:14
+msgid "Shopping cart"
 msgstr ""
 
 #: .\catalog\forms.py:17
 msgid "Price must be greater than zero."
 msgstr ""
 
-#: .\catalog\models.py:9 .\catalog\models.py:39
-msgid "Name"
+#: .\catalog\forms.py:24
+msgid "Please enter a valid quantity."
+msgstr ""
+
+#: .\catalog\forms.py:38
+msgid "Cookies must be enabled."
 msgstr ""
 
 #: .\catalog\models.py:10 .\catalog\models.py:40
+msgid "Name"
+msgstr ""
+
+#: .\catalog\models.py:11 .\catalog\models.py:41
 msgid "Slug"
 msgstr ""
 
-#: .\catalog\models.py:11
-msgid "Slug for product url, created from name."
+#: .\catalog\models.py:12
+msgid "Slug for product url created from name."
 msgstr ""
 
-#: .\catalog\models.py:13 .\catalog\models.py:53
+#: .\catalog\models.py:14 .\catalog\models.py:54
 msgid "Description"
 msgstr ""
 
-#: .\catalog\models.py:14 .\catalog\models.py:49
+#: .\catalog\models.py:15 .\catalog\models.py:50
 msgid "Active"
 msgstr ""
 
-#: .\catalog\models.py:15 .\catalog\models.py:54
+#: .\catalog\models.py:16 .\catalog\models.py:55
 msgid "Meta keywords"
 msgstr ""
 
-#: .\catalog\models.py:16 .\catalog\models.py:55
+#: .\catalog\models.py:17 .\catalog\models.py:56
 msgid "Comma-delimited set of SEO keywords for meta tag"
 msgstr ""
 
-#: .\catalog\models.py:18 .\catalog\models.py:56
+#: .\catalog\models.py:19 .\catalog\models.py:57
 msgid "Meta description"
 msgstr ""
 
-#: .\catalog\models.py:19
+#: .\catalog\models.py:20
 msgid "Content for description meta tags"
 msgstr ""
 
-#: .\catalog\models.py:20 .\catalog\models.py:58
+#: .\catalog\models.py:21 .\catalog\models.py:59
 msgid "Created at"
 msgstr ""
 
-#: .\catalog\models.py:21 .\catalog\models.py:59
+#: .\catalog\models.py:22 .\catalog\models.py:60
 msgid "Updated at"
 msgstr ""
 
-#: .\catalog\models.py:26 .\catalog\models.py:60
+#: .\catalog\models.py:27 .\catalog\models.py:61
 #: .\templates\tags\category_list.html.py:3
 msgid "Categories"
 msgstr ""
 
-#: .\catalog\models.py:41
+#: .\catalog\models.py:42
 msgid "Unique value for product page URL, created from name."
 msgstr ""
 
-#: .\catalog\models.py:42 .\templates\catalog\product.html.py:9
+#: .\catalog\models.py:43 .\templates\catalog\product.html.py:9
 msgid "Brand"
 msgstr ""
 
-#: .\catalog\models.py:43 .\templates\catalog\product.html.py:11
+#: .\catalog\models.py:44 .\templates\catalog\product.html.py:11
 msgid "SKU"
 msgstr ""
 
-#: .\catalog\models.py:44
+#: .\catalog\models.py:45
 msgid "Stock-keeping unit"
 msgstr ""
 
-#: .\catalog\models.py:48
+#: .\catalog\models.py:49
 msgid "Image"
 msgstr ""
 
-#: .\catalog\models.py:50
+#: .\catalog\models.py:51
 msgid "Bestseller"
 msgstr ""
 
-#: .\catalog\models.py:51
+#: .\catalog\models.py:52
 msgid "Featured"
 msgstr ""
 
-#: .\catalog\models.py:52
+#: .\catalog\models.py:53
 msgid "Quantity"
 msgstr ""
 
-#: .\catalog\models.py:57
+#: .\catalog\models.py:58
 msgid "Content for description meta tag"
 msgstr ""
 
-#: .\catalog\models.py:61
+#: .\catalog\models.py:62
 msgid "Categories for product"
 msgstr ""
 
-#: .\catalog\models.py:66 .\templates\tags\navigation.html.py:6
+#: .\catalog\models.py:67 .\templates\tags\navigation.html.py:6
 msgid "Products"
 msgstr ""
 
-#: .\catalog\views.py:12
+#: .\catalog\views.py:18
 msgid "Internet Magazine"
 msgstr ""
 
@@ -149,29 +165,47 @@ msgstr ""
 msgid "Welcome!"
 msgstr ""
 
+#: .\templates\cart\cart.html.py:4
+msgid "Cart Page Here"
+msgstr ""
+
+#: .\templates\cart\cart.html.py:5
+msgid "Cart item count"
+msgstr ""
+
 #: .\templates\catalog\index.html.py:5
 msgid "Welcome to our shop!"
 msgstr ""
 
 #: .\templates\catalog\product.html.py:13
-msgid "In category"
-msgid_plural "In categories"
+msgid ""
+"\n"
+"\t\tIn category:\n"
+"\t\t"
+msgid_plural ""
+"\n"
+"\t\tIn categories:\n"
+"\t"
 msgstr[0] ""
 msgstr[1] ""
 
-#: .\templates\catalog\product.html.py:20
+#: .\templates\catalog\product.html.py:24
 msgid "Was"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:22
+#: .\templates\catalog\product.html.py:26
 msgid "Now"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:24
+#: .\templates\catalog\product.html.py:28
 msgid "Price"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:30
+#: .\templates\catalog\product.html.py:34
+msgid "Add To Cart"
+msgstr ""
+
+#: .\templates\catalog\product.html.py:39
 msgid "Product Description"
 msgstr ""
 

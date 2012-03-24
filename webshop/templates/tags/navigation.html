@@ -1,9 +1,8 @@
 {% load i18n %}
 <ul>
-	<li><a href="/catalog/">{% trans "Home" %}</a></li>
-	<li><a href="/catalog/">{% trans "About" %}</a></li>
-	<li><a href="/catalog/">{% trans "Privacy" %}</a></li>
-	<li><a href="/catalog/">{% trans "Products" %}</a></li>
-	<li><a href="/catalog/">{% trans "Contact" %}</a></li>
+	<li><a href="{% catalog_home %}">{% trans "Home" %}</a></li>
+	<li><a href="/about/">{% trans "About" %}</a></li>
+	<li><a href="/privacy-policy/">{% trans "Privacy" %}</a></li>
+	<li><a href="/about/contacts/">{% trans "Contact" %}</a></li>
 </ul>
 <div class="cb"></div>
