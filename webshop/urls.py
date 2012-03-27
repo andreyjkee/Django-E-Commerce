@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
-import os
-
-from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from webshop import settings
@@ -20,8 +18,8 @@ urlpatterns = patterns('',
 	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 	# General application URLs
-	url(r'^', include('catalog.urls')),
-	url(r'^cart/', include('cart.urls')),
+	url(r'^', include('webshop.catalog.urls')),
+	url(r'^cart/', include('webshop.cart.urls')),
 
 	# enable language choice
 	url(r'^i18n/', include('django.conf.urls.i18n')),

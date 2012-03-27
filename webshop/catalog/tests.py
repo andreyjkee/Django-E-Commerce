@@ -5,7 +5,7 @@ import httplib
 from django.core import urlresolvers
 from django.test import TestCase
 from django.test.client import Client
-from django.views.defaults import page_not_found
+#from django.views.defaults import page_not_found
 
 from models import Category, Product
 
@@ -16,7 +16,7 @@ class CatalogTest(TestCase):
 
 	@staticmethod
 	def get_template_name(url):
-		"Получение названия шаблона из url"
+		"""Получение названия шаблона из url"""
 		# >>> urlresolvers.resolve('/product/something/')
 		# (<function show_product at 0x11e0488>, (),
 		#    {'template_name': 'catalog/product.html', 'product_slug': 'some-product'})
@@ -26,7 +26,7 @@ class CatalogTest(TestCase):
 		return url_entry[2]['template_name']
 
 	def test_view_homepage(self):
-		"Тестирование доступности главной страницы"
+		"""Тестирование доступности главной страницы"""
 		home_url = urlresolvers.reverse('catalog_home')
 		response = self.client.get(home_url)
 		template_name = self.get_template_name(home_url)
@@ -37,7 +37,7 @@ class CatalogTest(TestCase):
 		self.assertTemplateUsed(response, template_name)
 
 	def test_view_category(self):
-		"Тестирование доступности просмотра категории"
+		"""Тестирование доступности просмотра категории"""
 		category = Category.objects.all()[0]
 		#category = Category.is_active.all()[0]
 		category_url = category.get_absolute_url()
@@ -51,7 +51,7 @@ class CatalogTest(TestCase):
 		self.assertContains(response, category.description)
 
 	def test_view_product(self):
-		"Тестирование доступности просмотра категории"
+		"""Тестирование доступности просмотра категории"""
 		product = Product.objects.all()[0]
 		product_url = product.get_absolute_url()
 		template_name = self.get_template_name(product_url)

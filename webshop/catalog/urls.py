@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import patterns, url
 
 
-urlpatterns = patterns('catalog.views',
+urlpatterns = patterns('webshop.catalog.views',
 	# Главная страница
 	url(r'^$', 'index_view',
 		{'template_name':'catalog/index.html'},

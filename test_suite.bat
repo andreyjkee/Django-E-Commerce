@@ -1,2 +1,2 @@
-python webshop/manage.py test catalog
+python manage.py test catalog
 pause

@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.utils.translation import ugettext_lazy as _
 
-from catalog.models import Product
+from webshop.catalog.models import Product
 from models import CartItem
 
 

@@ -11,7 +11,7 @@ register = template.Library()
 
 @register.inclusion_tag("tags/cart_box.html")
 def cart_box(request):
-	"Вставка для виджета отображающего количество разных товаров в корзине"
+	"""Вставка для виджета отображающего количество разных товаров в корзине"""
 	cart_item_count = cart.cart_distinct_item_count(request)
 	return {'cart_item_count': cart_item_count }
 

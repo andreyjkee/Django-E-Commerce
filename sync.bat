@@ -1,5 +1,9 @@
 cd webshop
+
 del /S *.pyc
-python manage.py syncdb
 cd ..
+
+
+python manage.py syncdb
+
 PAUSE

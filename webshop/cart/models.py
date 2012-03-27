@@ -3,12 +3,12 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from catalog.models import Product
+from webshop.catalog.models import Product
 
 
 class CartItem(models.Model):
 	"""
-	Класс для товаров в корзине, хранит номер карты, 
+	Класс для товаров в корзине, хранит данные о том
 	какой товар в корзине и его количество
 	"""
 
