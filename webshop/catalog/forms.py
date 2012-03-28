@@ -7,7 +7,7 @@ from models import Product
 
 
 class ProductAdminForm(forms.ModelForm):
-	"Форма для управления товаром"
+	"""Форма для управления товаром"""
 	class Meta:
 		model = Product
 
@@ -19,7 +19,7 @@ class ProductAdminForm(forms.ModelForm):
 
 
 class ProductAddToCartForm(forms.Form):
-	"Форма добавления товара в корзину"
+	"""Форма добавления товара в корзину"""
 	quantity = forms.IntegerField(widget=forms.TextInput(attrs={'size': '2',
 		'value': '1', 'class': 'quantity', 'maxlength': '5'}),
 		error_messages={'invalid': _(u'Please enter a valid quantity.')},
@@ -35,7 +35,7 @@ class ProductAddToCartForm(forms.Form):
 		super(ProductAddToCartForm, self).__init__(*args, **kwargs)
 
 	def clean(self):
-		"Проверка что cookies в браузере включены"
+		"""Проверка что cookies в браузере включены"""
 		if self.request:
 			if not self.request.session.test_cookie_worked():
 				raise forms.ValidationError(_(u'Cookies must be enabled.'))

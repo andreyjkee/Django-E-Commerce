@@ -24,7 +24,7 @@ def _cart_id(request):
 	return request.session[CART_ID_SESSION_KEY]
 
 def _generate_cart_id():
-	"Генерация уникального id корзины который будет хранится в cookies"
+	"""Генерация уникального id корзины который будет хранится в cookies"""
 	cart_id = ''
 	characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()'
 	cart_id_length = 50
@@ -33,11 +33,11 @@ def _generate_cart_id():
 	return cart_id
 
 def get_cart_items(request):
-	"Получение всех товаров для текущей корзины"
+	"""Получение всех товаров для текущей корзины"""
 	return CartItem.objects.filter(cart_id=_cart_id(request))
 
 def add_to_cart(request):
-	"Добавление товара в корзину"
+	"""Добавление товара в корзину"""
 	postdata = request.POST.copy()
 	# Получаем чистое имя товара, возвращает пустую строку если нет
 	product_slug = postdata.get('product_slug', '')
@@ -63,15 +63,15 @@ def add_to_cart(request):
 		ci.save()
 
 def cart_distinct_item_count(request):
-	"Возвращает общее количество товаров в корзине"
+	"""Возвращает общее количество товаров в корзине"""
 	return get_cart_items(request).count()
 
 def get_single_item(request, item_id):
-	"Получаем конкретный товар в корзине"
+	"""Получаем конкретный товар в корзине"""
 	return get_object_or_404(CartItem, id=item_id, cart_id=_cart_id(request))
 
 def update_cart(request):
-	"Обновляет количество отдельного товара"
+	"""Обновляет количество отдельного товара"""
 	postdata = request.POST.copy()
 	item_id = postdata['item_id']
 	quantity = postdata['quantity']
@@ -85,7 +85,7 @@ def update_cart(request):
 			remove_from_cart(request)
  
 def remove_from_cart(request):
-	"Удаляет выбранный товар из корзины"
+	"""Удаляет выбранный товар из корзины"""
 	postdata = request.POST.copy()
 	item_id = postdata['item_id']
 	cart_item = get_single_item(request, item_id)
@@ -93,7 +93,7 @@ def remove_from_cart(request):
 		cart_item.delete()
 
 def cart_subtotal(request):
-	"Получение суммарной стоимости всех товаров"
+	"""Получение суммарной стоимости всех товаров"""
 	cart_total = decimal.Decimal('0.00')
 	cart_products = get_cart_items(request)
 	for cart_item in cart_products:

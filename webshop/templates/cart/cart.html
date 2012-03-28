@@ -34,13 +34,13 @@
 					<input type="hidden" name="item_id" value="{{ item.id }}" />
 				</td>
 				<td>
-					<input type="submit" name="submit" value="{% trans "Update" %}" />
+					<input class="btn btn-success" type="submit" name="update" value="{% trans "Update" %}" />
 				</form>
 			</td>
 			<td>
 				<form action="." method="post" class="cart">{% csrf_token %}
 					<input type="hidden" name="item_id" value="{{ item.id }}" />
-					<input type="submit" name="submit" value="{% trans "Remove" %}" />
+					<input class="btn btn-success" type="submit" name="remove" value="{% trans "Remove" %}" />
 				</form>
 			</td>
 			<td class="right">$ {{ item.total }}</td>
@@ -62,8 +62,9 @@
 		{% if cart_items %}
 		<tr>
 			<th class="right" collspan="6">
-				<a href="/urltochekout/">
-					{% trans "Checkout Now" %}
+				<a href="/urltochekout/" class="btn btn-success">
+					<i class="icon-shopping-cart icon-white"></i>
+					{% trans " Checkout Now" %}
 				</a>
 			</th>
 		</tr>

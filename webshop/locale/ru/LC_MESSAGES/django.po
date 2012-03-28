@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-22 11:04+0400\n"
+"POT-Creation-Date: 2012-03-28 16:41+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,15 +26,15 @@ msgstr ""
 msgid "Russian"
 msgstr ""
 
-#: .\settings.py:188
+#: .\settings.py:190
 msgid "Product magazine"
 msgstr ""
 
-#: .\settings.py:189
+#: .\settings.py:191
 msgid "products, online, shop, buy"
 msgstr ""
 
-#: .\settings.py:190
+#: .\settings.py:192
 msgid "Product magazine is an online supplier of products"
 msgstr ""
 
@@ -42,7 +42,8 @@ msgstr ""
 msgid "Page Not Found"
 msgstr ""
 
-#: .\cart\views.py:14
+#: .\cart\views.py:14 .\templates\tags\footer.html.py:8
+#: .\templates_old\tags\footer.html.py:8
 msgid "Shopping cart"
 msgstr ""
 
@@ -50,104 +51,108 @@ msgstr ""
 msgid "Price must be greater than zero."
 msgstr ""
 
-#: .\catalog\forms.py:24
+#: .\catalog\forms.py:25
 msgid "Please enter a valid quantity."
 msgstr ""
 
-#: .\catalog\forms.py:38
+#: .\catalog\forms.py:41
 msgid "Cookies must be enabled."
 msgstr ""
 
-#: .\catalog\models.py:10 .\catalog\models.py:40
+#: .\catalog\models.py:9 .\catalog\models.py:39
 msgid "Name"
 msgstr ""
 
-#: .\catalog\models.py:11 .\catalog\models.py:41
+#: .\catalog\models.py:10 .\catalog\models.py:40
 msgid "Slug"
 msgstr ""
 
-#: .\catalog\models.py:12
+#: .\catalog\models.py:11
 msgid "Slug for product url created from name."
 msgstr ""
 
-#: .\catalog\models.py:14 .\catalog\models.py:54
+#: .\catalog\models.py:13 .\catalog\models.py:53
 msgid "Description"
 msgstr ""
 
-#: .\catalog\models.py:15 .\catalog\models.py:50
+#: .\catalog\models.py:14 .\catalog\models.py:49
 msgid "Active"
 msgstr ""
 
-#: .\catalog\models.py:16 .\catalog\models.py:55
+#: .\catalog\models.py:15 .\catalog\models.py:54
 msgid "Meta keywords"
 msgstr ""
 
-#: .\catalog\models.py:17 .\catalog\models.py:56
+#: .\catalog\models.py:16 .\catalog\models.py:55
 msgid "Comma-delimited set of SEO keywords for meta tag"
 msgstr ""
 
-#: .\catalog\models.py:19 .\catalog\models.py:57
+#: .\catalog\models.py:18 .\catalog\models.py:56
 msgid "Meta description"
 msgstr ""
 
-#: .\catalog\models.py:20
+#: .\catalog\models.py:19
 msgid "Content for description meta tags"
 msgstr ""
 
-#: .\catalog\models.py:21 .\catalog\models.py:59
+#: .\catalog\models.py:20 .\catalog\models.py:58
 msgid "Created at"
 msgstr ""
 
-#: .\catalog\models.py:22 .\catalog\models.py:60
+#: .\catalog\models.py:21 .\catalog\models.py:59
 msgid "Updated at"
 msgstr ""
 
-#: .\catalog\models.py:27 .\catalog\models.py:61
+#: .\catalog\models.py:26 .\catalog\models.py:60
 #: .\templates\tags\category_list.html.py:3
+#: .\templates_old\tags\category_list.html.py:3
 msgid "Categories"
 msgstr "Категории"
 
-#: .\catalog\models.py:42
+#: .\catalog\models.py:41
 msgid "Unique value for product page URL, created from name."
 msgstr ""
 
-#: .\catalog\models.py:43 .\templates\catalog\product.html.py:9
+#: .\catalog\models.py:42 .\templates\catalog\product.html.py:10
+#: .\templates_old\catalog\product.html.py:10
 msgid "Brand"
 msgstr ""
 
-#: .\catalog\models.py:44 .\templates\catalog\product.html.py:11
+#: .\catalog\models.py:43 .\templates\catalog\product.html.py:12
+#: .\templates_old\catalog\product.html.py:12
 msgid "SKU"
 msgstr ""
 
-#: .\catalog\models.py:45
+#: .\catalog\models.py:44
 msgid "Stock-keeping unit"
 msgstr ""
 
-#: .\catalog\models.py:49
+#: .\catalog\models.py:48
 msgid "Image"
 msgstr ""
 
-#: .\catalog\models.py:51
+#: .\catalog\models.py:50
 msgid "Bestseller"
 msgstr "Лучшие продажи"
 
-#: .\catalog\models.py:52
+#: .\catalog\models.py:51
 msgid "Featured"
 msgstr ""
 
-#: .\catalog\models.py:53
+#: .\catalog\models.py:52 .\templates\cart\cart.html.py:32
+#: .\templates_old\cart\cart.html.py:32
 msgid "Quantity"
 msgstr ""
 
-#: .\catalog\models.py:58
+#: .\catalog\models.py:57
 msgid "Content for description meta tag"
 msgstr ""
 
-#: .\catalog\models.py:62
+#: .\catalog\models.py:61
 msgid "Categories for product"
 msgstr ""
 
-#: .\catalog\models.py:67 .\templates\tags\navigation.html.py:6
+#: .\catalog\models.py:66
 msgid "Products"
 msgstr ""
 
@@ -155,31 +160,70 @@ msgstr ""
 msgid "Internet Magazine"
 msgstr ""
 
-#: .\templates\catalog.html.py:6
+#: .\templates\404.html.py:5 .\templates_old\404.html.py:5
+msgid "Страница не найдена. Приносим Вам свои извинения."
+msgstr ""
+
+#: .\templates\404.html.py:6 .\templates_old\404.html.py:6
+msgid "Проверьте что вы ввели правильный адрес в строке браузера."
+msgstr ""
+
+#: .\templates\catalog.html.py:7 .\templates_old\catalog.html.py:7
 msgid "Skip to main content"
 msgstr ""
 
-#: .\templates\catalog.html.py:12
+#: .\templates\catalog.html.py:13 .\templates_old\catalog.html.py:13
 msgid "Internet magazine"
 msgstr ""
 
-#: .\templates\index.html.py:5
+#: .\templates\index.html.py:5 .\templates_old\index.html.py:5
 msgid "Welcome!"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:4
-msgid "Cart Page Here"
+#: .\templates\cart\cart.html.py:7 .\templates_old\cart\cart.html.py:7
+msgid "Your Shopping Cart"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:5
-msgid "Cart item count"
+#: .\templates\cart\cart.html.py:10 .\templates_old\cart\cart.html.py:10
+msgid "Product"
 msgstr ""
 
-#: .\templates\catalog\index.html.py:5
+#: .\templates\cart\cart.html.py:11 .\templates\catalog\product.html.py:30
+#: .\templates_old\cart\cart.html.py:11
+#: .\templates_old\catalog\product.html.py:30
+msgid "Price"
+msgstr ""
+
+#: .\templates\cart\cart.html.py:15 .\templates_old\cart\cart.html.py:15
+msgid "Total"
+msgstr ""
+
+#: .\templates\cart\cart.html.py:37 .\templates_old\cart\cart.html.py:37
+msgid "Update"
+msgstr ""
+
+#: .\templates\cart\cart.html.py:43 .\templates_old\cart\cart.html.py:43
+msgid "Remove"
+msgstr ""
+
+#: .\templates\cart\cart.html.py:52 .\templates_old\cart\cart.html.py:52
+msgid "Your cart is empty"
+msgstr ""
+
+#: .\templates\cart\cart.html.py:59 .\templates_old\cart\cart.html.py:59
+msgid "Cart Subtotal"
+msgstr ""
+
+#: .\templates\cart\cart.html.py:66 .\templates_old\cart\cart.html.py:66
+msgid "Checkout Now"
+msgstr ""
+
+#: .\templates\catalog\index.html.py:5 .\templates_old\catalog\index.html.py:5
 msgid "Welcome to our shop!"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:13
+#: .\templates\catalog\product.html.py:15
+#: .\templates_old\catalog\product.html.py:15
 msgid ""
 "\n"
 "\t\tIn category:\n"
@@ -192,38 +236,51 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: .\templates\catalog\product.html.py:24
+#: .\templates\catalog\product.html.py:26
+#: .\templates_old\catalog\product.html.py:26
 msgid "Was"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:26
+#: .\templates\catalog\product.html.py:28
+#: .\templates_old\catalog\product.html.py:28
 msgid "Now"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:28
-msgid "Price"
-msgstr ""
-
-#: .\templates\catalog\product.html.py:34
+#: .\templates\catalog\product.html.py:36
+#: .\templates_old\catalog\product.html.py:36
 msgid "Add To Cart"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:39
+#: .\templates\catalog\product.html.py:41
+#: .\templates_old\catalog\product.html.py:41
 msgid "Product Description"
 msgstr ""
 
-#: .\templates\tags\navigation.html.py:3
+#: .\templates\tags\cart_box.html.py:6 .\templates_old\tags\cart_box.html.py:6
+msgid "Shopping Cart"
+msgstr ""
+
+#: .\templates\tags\cart_box.html.py:8 .\templates_old\tags\cart_box.html.py:8
+msgid "Item"
+msgstr ""
+
+#: .\templates\tags\footer.html.py:2 .\templates\tags\navigation.html.py:3
+#: .\templates_old\tags\footer.html.py:2
+#: .\templates_old\tags\navigation.html.py:3
 msgid "Home"
 msgstr ""
 
 #: .\templates\tags\navigation.html.py:4
+#: .\templates_old\tags\navigation.html.py:4
 msgid "About"
 msgstr ""
 
 #: .\templates\tags\navigation.html.py:5
+#: .\templates_old\tags\navigation.html.py:5
 msgid "Privacy"
 msgstr ""
 
-#: .\templates\tags\navigation.html.py:7
+#: .\templates\tags\navigation.html.py:6
+#: .\templates_old\tags\navigation.html.py:6
 msgid "Contact"
 msgstr ""

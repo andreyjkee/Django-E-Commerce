@@ -23,25 +23,25 @@ class CartItem(models.Model):
 
 	@property
 	def total(self):
-		"Метод для подсчета суммы, цена товара * кол-во"
+		"""Метод для подсчета суммы, цена товара * кол-во"""
 		return self.quantity * self.product.price
 
 	@property
 	def name(self):
-		"Получение названия товара в корзине"
+		"""Получение названия товара в корзине"""
 		return self.product.name
 
 	@property
 	def price(self):
-		"Получение цены товара в корзине"
+		"""Получение цены товара в корзине"""
 		return self.product.price
 
 	def get_absolute_url(self):
-		"Получение абсолютной ссылки на товар"
+		"""Получение абсолютной ссылки на товар"""
 		return self.product.get_absolute_url()
 
 	def augment_quantity(self, quantity):
-		"Изменение количества товара в корзине"
+		"""Изменение количества товара в корзине"""
 		if quantity.isdigit():
 			self.quantity = self.quantity + int(quantity)
 			self.save()

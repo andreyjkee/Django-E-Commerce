@@ -14,25 +14,25 @@ from models import Category, Product
 
 
 def index_view(request, template_name="catalog/index.html"):
-	"Представление главной страницы"
+	"""Представление главной страницы"""
 	page_title = _(u'Internet Magazine')
 	# Функция locals получает все поля словаря
-	return render_to_response(template_name, locals(), 
+	return render_to_response(template_name, locals(),
 		context_instance=RequestContext(request))
 	
 def category_view(request, category_slug, template_name="catalog/category.html"):
-	"Представление для просмотра конкретной категории"
+	"""Представление для просмотра конкретной категории"""
 	c = get_object_or_404(Category, slug=category_slug)
 	products = c.product_set.all()
 	page_title = c.name
 	meta_keywords = c.meta_keywords
 	meta_description = c.meta_description
-	return render_to_response(template_name, locals(), 
+	return render_to_response(template_name, locals(),
 		context_instance=RequestContext(request))
 
 @csrf_protect
 def product_view(request, product_slug, template_name="catalog/product.html"):
-	"Представление для просмотра конкретного продукта"
+	"""Представление для просмотра конкретного продукта"""
 	p = get_object_or_404(Product, slug=product_slug)
 	categories = p.categories.filter(is_active=True)
 	page_title = p.name
@@ -59,5 +59,5 @@ def product_view(request, product_slug, template_name="catalog/product.html"):
 	form.fields['product_slug'].widget.attrs['value'] = product_slug
 	# Устанавливаем тестовые cookies при первом GET запросе
 	request.session.set_test_cookie()
-	return render_to_response(template_name, locals(), 
+	return render_to_response(template_name, locals(),
 		context_instance=RequestContext(request))

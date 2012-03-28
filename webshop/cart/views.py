@@ -10,13 +10,13 @@ from webshop.cart import cart
 
 @csrf_protect
 def cart_view(request, template_name="cart/cart.html"):
-	"Представление для отображения корзины"
+	"""Представление для отображения корзины"""
 	page_title = _(u'Shopping cart')
 	if request.method == 'POST':
 		postdata = request.POST.copy()
-		if postdata['submit'] == 'Remove':
+		if postdata.has_key('remove'):
 			cart.remove_from_cart(request)
-		if postdata['submit'] == 'Update':
+		if postdata.has_key('update'):
 			cart.update_cart(request)
 	# Получаем список всех товаров в корзине из cookies
 	#cart_item_count = cart.cart_item_count(request)

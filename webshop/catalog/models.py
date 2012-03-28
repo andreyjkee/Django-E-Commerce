@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Category(models.Model):
-	"Класс для категорий товаров"
+	"""Класс для категорий товаров"""
 	name = models.CharField(_(u'Name'), max_length=50, unique=True)
 	slug = models.SlugField(_(u'Slug'), max_length=50, unique=True,
 		help_text=_(u'Slug for product url created from name.'))
@@ -30,12 +30,12 @@ class Category(models.Model):
 	
 	@models.permalink
 	def get_absolute_url(self):
-		"Генерация постоянных ссылок на категории"
+		"""Генерация постоянных ссылок на категории"""
 		return ('catalog_category', (), {'category_slug': self.slug})
 
 
 class Product(models.Model):
-	"Класс для товаров"
+	"""Класс для товаров"""
 	name = models.CharField(_(u'Name'), max_length=255, unique=True)
 	slug = models.SlugField(_(u'Slug'), max_length=255, unique=True,
 		help_text=_(u'Unique value for product page URL, created from name.'))
@@ -70,7 +70,7 @@ class Product(models.Model):
 
 	@models.permalink
 	def get_absolute_url(self):
-		"Генерация постоянных ссылок на товары"
+		"""Генерация постоянных ссылок на товары"""
 		return ('catalog_product', (), {'product_slug': self.slug})
 
 	@property

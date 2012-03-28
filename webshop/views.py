@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 def file_not_found_404(request):
-	"Специальная станица 404, работает только если DEBUG = False"
+	"""Представление для страницы которая не найдена"""
 	page_title = _(u'Page Not Found')
 	return render_to_response('404.html', locals(), 
 		context_instance=RequestContext(request))

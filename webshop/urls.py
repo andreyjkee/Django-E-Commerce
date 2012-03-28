@@ -34,4 +34,4 @@ if settings.DEBUG:
 		# if work then show 404 Directory indexes are not allowed here.
 	)
 
-#handler404 = 'webshop.views.file_not_found_404'
+handler404 = 'webshop.views.file_not_found_404'
