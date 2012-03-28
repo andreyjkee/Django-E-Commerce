@@ -1,0 +1,8 @@
+{% load i18n %}
+<a href="{% url catalog_home %}">{% trans "Home" %}</a>
+{% with flatpage_list as pages %}
+	{% for page in pages %}
+		<a href="{{ page.url }}">{{ page.title }}</a>
+	{% endfor %}
+{% endwith %}
+<a href="{% url show_cart %}">{% trans "Shopping cart" %}</a>

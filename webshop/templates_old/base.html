@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/css.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}{% endblock %}</title>
+	<meta name="keywords" content="{{ meta_keywords }}" />
+	<meta name="description" content="{{ meta_description }}" />
+</head>
+<body>
+	{% load i18n %}
+	{% load settings_webstore %}
+	{% block site_wrapper %}{% endblock %}
+	{% get_setting "MIDDLEWARE_CLASSES" as middleware_classes %}
+	{% if "django.middleware.locale.LocaleMiddleware" in middleware_classes %}
+		<form action="{% url set_language %}" method="post">{% csrf_token %}
+			<select name="language" onchange="this.form.submit()">
+				{% for lang in LANGUAGES %}
+					<option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected="selected"{% endif %}>{{ lang.0|language_name_local|capfirst }}</option>
+				{% endfor %}
+			</select>
+		</form>
+	{% endif %}
+</body>
+</html>

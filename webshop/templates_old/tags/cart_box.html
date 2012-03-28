@@ -1,0 +1,10 @@
+{% load i18n %}
+{% load catalog_tags %}
+
+{% with cart_item_count as cart_count %}
+	<a href="{% url show_cart %}">
+		{% trans "Shopping Cart" %}
+	<br />
+		{{ cart_count }} {% trans "Item" %}{{ cart_count|pluralize }}
+	</a>
+{% endwith %}
