@@ -1,16 +1,19 @@
 {% load i18n %}
 
 <h3>{% trans "Categories" %}</h3>
-<ul id="categories">
-{% with active_categories as cats %}
-	{% for c in cats %}
-		<li>
-			{% ifequal c.get_absolute_url request_path %}
-				{{ c.name }}<br />
-			{% else %}
-				<a href="{{ c.get_absolute_url }}" class="category">{{ c.name }}</a><br />
-			{% endifequal %}
-		</li>
-	{% endfor %}
-{% endwith %}
-</ul>
+
+{% load mptt_tags %}
+<div class="well">
+	<ul class="nav nav-list">
+		{% recursetree nodes %}
+			<li class="nav-header">
+				<a href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+				{% if not node.is_leaf_node %}
+					<ul class="children">
+						{{ children }}
+					</ul>
+				{% endif %}
+			</li>
+		{% endrecursetree %}
+	</ul>
+</div>
