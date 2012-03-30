@@ -76,13 +76,13 @@ def update_cart(request):
 	item_id = postdata['item_id']
 	quantity = postdata['quantity']
 	cart_item = get_single_item(request, item_id)
-	# TODO: добавить предупреждение
 	if cart_item:
 		if quantity.isdigit() and int(quantity) > 0:
 			cart_item.quantity = int(quantity)
 			cart_item.save()
-		else:
-			remove_from_cart(request)
+#		else:
+# TODO: добавить предупреждение
+#			remove_from_cart(request)
  
 def remove_from_cart(request):
 	"""Удаляет выбранный товар из корзины"""
