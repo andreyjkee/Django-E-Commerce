@@ -16,13 +16,9 @@ def cart_box(request):
 	return {'cart_item_count': cart_item_count }
 
 @register.inclusion_tag("tags/category_list.html")
-def category_list(request_path):
-	"Вставка для виджета отображающего списка всех активных категорий"
-	active_categories = Category.objects.filter(is_active=True)
-	return {
-		'active_categories': active_categories,
-		'request_path': request_path
-	}
+def categories_tree(request):
+	"""Возвращает дерево категорий"""
+	return {'nodes': Category.objects.filter(is_active=True) }
 
 @register.inclusion_tag("tags/footer.html")
 def footer_links():
