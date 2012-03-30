@@ -1,1 +1,0 @@
-python webshop/manage.py dumpdata catalog --indent=2 > catalog/fixtures/initial_data.json
