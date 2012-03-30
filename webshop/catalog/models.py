@@ -2,9 +2,10 @@
 #!/usr/bin/env python
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from mptt.models import MPTTModel, TreeForeignKey
 
 
-class Category(models.Model):
+class Category(MPTTModel):
 	"""Класс для категорий товаров"""
 	name = models.CharField(_(u'Name'), max_length=50, unique=True)
 	slug = models.SlugField(_(u'Slug'), max_length=50, unique=True,
@@ -19,6 +20,9 @@ class Category(models.Model):
 		help_text=_(u'Content for description meta tags'))
 	created_at = models.DateTimeField(_(u'Created at'), auto_now_add=True)
 	updated_at = models.DateTimeField(_(u'Updated at'), auto_now=True)
+	parent = TreeForeignKey('self', verbose_name=_(u'Parent category'),
+		related_name= 'children', blank=True,
+		help_text=_(u'Parent-category for current category'), null=True)
 
 	class Meta:
 		db_table = 'categories'
