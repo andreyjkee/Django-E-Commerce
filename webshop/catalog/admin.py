@@ -2,8 +2,8 @@
 #!/usr/bin/env python
 from django.contrib import admin
 
-from forms import ProductAdminForm
-from models import Product, Category
+from webshop.catalog.forms import ProductAdminForm
+from webshop.catalog.models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):

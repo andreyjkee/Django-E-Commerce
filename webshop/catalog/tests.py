@@ -7,7 +7,7 @@ from django.test import TestCase
 from django.test.client import Client
 #from django.views.defaults import page_not_found
 
-from models import Category, Product
+from webshop.catalog.models import Category, Product
 
 
 class CatalogTest(TestCase):

@@ -3,12 +3,10 @@
 import decimal
 import random
 
-from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
-from django.utils.translation import ugettext_lazy as _
 
 from webshop.catalog.models import Product
-from models import CartItem
+from webshop.cart.models import CartItem
 
 
 CART_ID_SESSION_KEY = 'cart_id'

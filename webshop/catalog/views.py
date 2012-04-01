@@ -9,8 +9,7 @@ from django.views.decorators.csrf import csrf_protect
 
 from webshop.cart import cart
 from webshop.catalog.forms import ProductAddToCartForm
-
-from models import Category, Product
+from webshop.catalog.models import Category, Product
 
 
 def index_view(request, template_name="catalog/index.html"):

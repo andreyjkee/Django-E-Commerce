@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
 
 from webshop.catalog.models import Product
 
