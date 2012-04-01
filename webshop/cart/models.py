@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
+import decimal
+
 from django.db import models
 
 from webshop.catalog.models import Product
@@ -23,7 +25,7 @@ class CartItem(models.Model):
 	@property
 	def total(self):
 		"""Метод для подсчета суммы, цена товара * кол-во"""
-		return self.quantity * self.product.price
+		return decimal.Decimal(self.quantity * float(self.product.price))
 
 	@property
 	def name(self):
