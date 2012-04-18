@@ -1,0 +1,24 @@
+{% block navigation %}
+	{% load i18n %}
+	<div class="navbar navbar-inner navbar-fixed-top">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
+				<a class="brand" href="/">{% trans "Document store" %}</a>
+				<div class="nav-collapse">
+					<ul class="nav" id="nav">
+{#						{% if user.is_authenticated %}#}
+							<li><a href="{% url catalog_home %}">{% trans "Catalog" %}</a></li>
+							<li><a href="{% url show_cart %}">{% trans "Shopping Cart" %}</a></li>
+{#							<li><a href="{% url django.contrib.auth.views.logout %}">{% trans "Logout" %}</a></li>#}
+{#						{% else %}#}
+{#							<li><a href="{% url django.contrib.auth.views.login %}">{% trans "Login" %}</a></li>#}
+{#						{% endif %}#}
+					</ul>
+					<form class="navbar-search pull-right" action=".">
+						<input type="text" class="search-query span2" placeholder="{% trans "Search..." %}">
+					</form>
+				</div>
+			</div>
+	</div>
+{% endblock %}
+
