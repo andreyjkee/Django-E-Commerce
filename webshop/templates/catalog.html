@@ -3,41 +3,27 @@
 {% load catalog_tags %}
 
 {% block site_wrapper %}
-	<div id="main">
+	<div class="row-fluid">
 		<a href="#content" class="skip_link">{% trans "Skip to main content" %}</a>
-		<div id="banner">
-			<div class="bannerIEPadder">
-				<div class="cart_box">
+		<div class="span12">
+			<div class="cart_box">
 					{% cart_box request %}
-				</div>
-				<a href="{% url catalog_home %}">{% trans "Internet magazine" %}</a>
 			</div>
+			<a href="{% url catalog_home %}"><h1>{% trans "Internet magazine banner" %}</h1></a>
 		</div>
-		<div id="navigation">
-			<div class="navIEPadder">
-				{% include 'tags/navigation.html' %}
-			</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span3">
+			{% categories_tree request %}
 		</div>
-		<div id="middle">
-			<div id="sidebar">
-				<div class="sidebarIEPadder">
-					[search box here]
-					<br />
-					{% categories_tree request %}
-				</div>
-			</div>
-			<div id="content">
-				<a name="content"></a>
-				<div class="contentIEPadder">
-					{% block content %}{% endblock %}
-				</div>
-			</div>
+		<div class="span9 offset3">
+			<a name="content"></a>
+				{% block content %}{% endblock %}
 		</div>
-		<div id="footer">
-			<div class="footerIEPadder">
-				123
-				{% footer_links %}
-			</div>
+	</div>
+	<div class="row-fluid" align="center">
+		<div class="span12">
+			{% footer_links %}
 		</div>
 	</div>
 {% endblock %}
