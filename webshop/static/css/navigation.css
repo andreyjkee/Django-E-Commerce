@@ -1,0 +1,23 @@
+#navigation{
+    width: 900px;
+    height: auto;
+    background-color: #98AC5E;
+    text-align: middle;
+}
+#navigation ul{
+    list-style:none;
+}
+#navigation ul li{
+    float: left;
+    margin-right: 15px;
+}
+#navigation ul li a{
+    color: White;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#navigation ul li a:hover{
+    color: #616161;
+    background-color: White;
+    text-decoration: none;
+}

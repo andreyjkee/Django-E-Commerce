@@ -1,0 +1,29 @@
+/*Стиль для страницы отображающей корзину*/
+table#shopping_cart{
+     width:100%;
+     border-collapse:collapse;
+     color:#616161;
+} 
+h1,caption{
+     text-align:left;
+     font-size:x-large; 
+     margin-bottom:15px;
+     color:Black;
+}
+th,td{
+     text-align:left;
+     padding:3px;
+}
+thead th{
+     color:White;
+     background-color:#616161;
+}
+tfoot th{
+     height:40px;
+}
+table#shopping_cart th.right, td.right{
+     text-align:right;
+}
+a.cart{
+     color:DarkOrange;
+}

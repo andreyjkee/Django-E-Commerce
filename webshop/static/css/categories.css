@@ -1,0 +1,10 @@
+ul#categories{
+    list-style: none;
+}
+ul#categories li{
+    font-weight: bold;
+    color: #616161;
+}
+ul#categories li a{
+    text-decoration: underline;
+}
