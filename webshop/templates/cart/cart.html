@@ -3,13 +3,13 @@
 {% load catalog_filters %}
 
 {% block content %}
-<table id="shopping_cart">
+<table class="table">
 	<caption>{% trans "Your Shopping Cart" %}</caption>
 	<thead>
 		<tr>
 			<th scope="col">{% trans "Product" %}</th>
 			<th scope="col">{% trans "Price" %}</th>
-			<th></th>
+			<th>{% trans "Quantity" %}</th>
 			<th></th>
 			<th></th>
 			<th scope="col" class="right">{% trans "Total" %}</th>
@@ -29,11 +29,12 @@
 			</td>
 			<td class="right">
 				<form method="post" action="." class="cart">{% csrf_token %}
-					<label class="control-label" for="quantity">{% trans "Quantity" %}:</label>
+					{#<label class="control-label" for="quantity">{% trans "Quantity" %}:</label>#}
 					<input type="text" name="quantity" value="{{ item.quantity }}" id="quantity" size="2" class="quantity" maxlength="5" />
 					<input type="hidden" name="item_id" value="{{ item.id }}" />
-				</td>
-				<td>
+			</td>
+			<td>
+					<input type="hidden" name="item_id" value="{{ item.id }}" />
 					<button class="btn btn-info" type="submit" name="update"><i class="icon-refresh icon-white"></i> {% trans "Update" %}</button>
 				</form>
 			</td>
