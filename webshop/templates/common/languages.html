@@ -1,0 +1,13 @@
+{% load i18n %}
+{% load settings_webstore %}
+
+{% get_setting "MIDDLEWARE_CLASSES" as middleware_classes %}
+{% if "django.middleware.locale.LocaleMiddleware" in middleware_classes %}
+	<form action="{% url set_language %}" method="post" class="pull-right">{% csrf_token %}
+		<select name="language" onchange="this.form.submit()">
+			{% for lang in LANGUAGES %}
+				<option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected="selected"{% endif %}>{{ lang.0|language_name_local|capfirst }}</option>
+			{% endfor %}
+		</select>
+	</form>
+{% endif %}
