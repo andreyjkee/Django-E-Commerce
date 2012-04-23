@@ -157,6 +157,7 @@ INSTALLED_APPS = (
 	'django.contrib.flatpages',
 	'webshop.catalog',
 	'webshop.cart',
+	'webshop.accounts',
 	# Uncomment the next line to enable the admin:
 	'django.contrib.admin',
 	# Uncomment the next line to enable admin documentation:
@@ -189,6 +190,8 @@ LOGGING = {
 }
 
 # Custom settings
+SSL = True
+ENABLE_SSL = True
 SITE_NAME = _(u'Product magazine')
 META_KEYWORDS = _(u'products, online, shop, buy')
 META_DESCRIPTION = _(u'Product magazine is an online supplier of products')
