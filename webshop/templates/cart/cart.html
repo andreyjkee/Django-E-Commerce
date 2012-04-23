@@ -30,18 +30,21 @@
 			<td class="right">
 				<form method="post" action="." class="cart">{% csrf_token %}
 					{#<label class="control-label" for="quantity">{% trans "Quantity" %}:</label>#}
-					<input type="text" name="quantity" value="{{ item.quantity }}" id="quantity" size="2" class="quantity" maxlength="5" />
+					<input type="text" name="quantity" value="{{ item.quantity }}" id="quantity"
+						   size="2" class="quantity" maxlength="5" />
 					<input type="hidden" name="item_id" value="{{ item.id }}" />
 			</td>
 			<td>
 					<input type="hidden" name="item_id" value="{{ item.id }}" />
-					<button class="btn btn-info" type="submit" name="update"><i class="icon-refresh icon-white"></i> {% trans "Update" %}</button>
+					<button class="btn btn-info" type="submit" name="update">
+						<i class="icon-refresh icon-white"></i> {% trans "Update" %}</button>
 				</form>
 			</td>
 			<td>
 				<form method="post" action="." class="cart">{% csrf_token %}
 					<input type="hidden" name="item_id" value="{{ item.id }}" />
-					<button class="btn btn-danger" type="submit" name="remove"><i class="icon-trash icon-white"></i> {% trans "Remove" %}</button>
+					<button class="btn btn-danger" type="submit" name="remove">
+						<i class="icon-trash icon-white"></i> {% trans "Remove" %}</button>
 				</form>
 			</td>
 			<td class="right">$ {{ item.total }}</td>
