@@ -18,6 +18,8 @@ urlpatterns = patterns('',
 	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 	# General application URLs
+	url(r'^accounts/', include('django.contrib.auth.urls')),
+	url(r'^accounts/', include('webshop.accounts.urls')),
 	url(r'^', include('webshop.catalog.urls')),
 	url(r'^cart/', include('webshop.cart.urls')),
 
