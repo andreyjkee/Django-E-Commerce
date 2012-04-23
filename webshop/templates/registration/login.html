@@ -1,0 +1,35 @@
+{% extends "catalog.html" %}
+{% load i18n %}
+
+{% block content %}
+	<div class="span4">
+	{% if form.errors %}
+		<ul class="badge badge-error">
+			<li>
+				<span class="label label-warning">{% trans "Important" %}</span>
+				{% trans "You entered an invalid username or password." %}
+			</li>
+		</ul>
+		<br />
+	{% endif %}
+	<form method="post" action="{% url django.contrib.auth.views.login %}">{% csrf_token %}
+		<table summary="{% trans "Login" %}" id="login">
+			<caption>{% trans "Login" %}</caption>
+			<tr>
+				<td>{{ form.username.label_tag }}</td>
+				<td>{{ form.username }}</td>
+			</tr>
+			<tr>
+				<td>{{ form.password.label_tag }}</td>
+				<td>{{ form.password }}</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="right">
+					<input type="submit" value="{% trans "Login"%}" />
+				</td>
+			</tr>
+		</table>
+		<input type="hidden" name="next" value="{{ next }}" />
+	</form>
+	</div>
+{% endblock %}
