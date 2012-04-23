@@ -7,8 +7,8 @@ from webshop import settings
 
 urlpatterns = patterns('webshop.accounts.views',
 	# Форма регистрации
-	url(r'^$', 'register_view',
-		{'template_name': 'registration/register.html', 'SSL': settings.ENABLE_SSL },
+	url(r'^register/$', 'register_view',
+		{'template_name': 'registration/register.html' }, # , 'SSL': settings.ENABLE_SSL
 		name='register'),
 	# Просмотр аккаунта пользователя
 	url(r'^my_account/$', 'my_account_view',
