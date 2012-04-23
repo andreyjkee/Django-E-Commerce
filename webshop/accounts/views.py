@@ -10,7 +10,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.csrf import csrf_protect
 
 @csrf_protect
-def register_view(request, template_name="registration/register.html"):
+def register_view(request, template_name="registration/login.html"):
 	"""Регистрация нового пользователя"""
 	page_title = _(u'User Registration')
 	if request.method == 'POST':

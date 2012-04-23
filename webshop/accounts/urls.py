@@ -25,6 +25,6 @@ urlpatterns = patterns('webshop.accounts.views',
 )
 
 urlpatterns += patterns('django.contrib.auth.views',
-	url(r'^login/$', 'login', {'template_name': 'registration/login', 'SSL': settings.ENABLE_SSL },
+	url(r'^login/$', 'login', {'template_name': 'registration/login.html', 'SSL': settings.ENABLE_SSL },
 		name='login'),
 )
