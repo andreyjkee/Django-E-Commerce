@@ -3,13 +3,13 @@
 {% load catalog_tags %}
 
 {% block site_wrapper %}
-	<div class="row-fluid">
-		<a href="#content" class="skip_link">{% trans "Skip to main content" %}</a>
-		<div class="span12">
-			<div class="cart_box">
-					{% cart_box request %}
-			</div>
-			<a href="{% url catalog_home %}"><h1>{% trans "Internet magazine banner" %}</h1></a>
+  <div class="row-fluid">
+		<div class="span10">
+      <a href="#content" class="skip_link">{% trans "Skip to main content" %}</a>
+		  <a href="{% url catalog_home %}"><h1>{% trans "Banner" %}</h1></a>
+    </div>
+    <div class="span2">
+      {% cart_box request %}
 		</div>
 	</div>
 	<div class="row-fluid">
