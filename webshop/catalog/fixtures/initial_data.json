@@ -4,7 +4,7 @@
     "model": "catalog.category", 
     "fields": {
       "meta_description": "\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f 1", 
-      "rght": 4, 
+      "rght": 6, 
       "meta_keywords": "\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f 1", 
       "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 1", 
       "parent": null, 
@@ -30,11 +30,30 @@
       "level": 1, 
       "created_at": "2012-03-30T15:04:26.700", 
       "is_active": true, 
-      "updated_at": "2012-03-30T15:04:26.700", 
+      "updated_at": "2012-04-29T15:38:14.238", 
       "lft": 2, 
       "tree_id": 1, 
       "slug": "podkategoriya-dlya-kategorii-1", 
-      "name": "\u041f\u043e\u0434\u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f \u0434\u043b\u044f \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 1"
+      "name": "\u041f\u043e\u0434\u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f 1"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "\u0441\u043b\u043e\u0432\u043e", 
+      "rght": 5, 
+      "meta_keywords": "\u0441\u043b\u043e\u0432\u043e", 
+      "description": "\u041f\u043e\u0434\u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f 2 \u0432 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 1", 
+      "parent": 1, 
+      "level": 1, 
+      "created_at": "2012-04-29T16:31:50.672", 
+      "is_active": true, 
+      "updated_at": "2012-04-29T16:31:50.672", 
+      "lft": 4, 
+      "tree_id": 1, 
+      "slug": "podkategoriya-2", 
+      "name": "\u041f\u043e\u0434\u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f 2"
     }
   }, 
   {
@@ -42,18 +61,37 @@
     "model": "catalog.category", 
     "fields": {
       "meta_description": "\u0430\u044b\u0430\u0444\u0430", 
-      "rght": 2, 
+      "rght": 4, 
       "meta_keywords": "\u0430\u0444\u044b\u0444\u0430", 
-      "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 2", 
+      "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 2", 
       "parent": null, 
       "level": 0, 
       "created_at": "2012-03-30T15:04:47.993", 
       "is_active": true, 
-      "updated_at": "2012-03-30T15:04:47.993", 
+      "updated_at": "2012-04-29T16:33:35.087", 
       "lft": 1, 
       "tree_id": 2, 
       "slug": "kategoriya-2", 
       "name": "\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f 2"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "catalog.category", 
+    "fields": {
+      "meta_description": "\u0441\u043b\u043e\u0432\u043e", 
+      "rght": 3, 
+      "meta_keywords": "\u0441\u043b\u043e\u0432\u043e", 
+      "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435", 
+      "parent": 3, 
+      "level": 1, 
+      "created_at": "2012-04-29T16:32:14.461", 
+      "is_active": true, 
+      "updated_at": "2012-04-29T16:32:14.461", 
+      "lft": 2, 
+      "tree_id": 2, 
+      "slug": "podkategoriya-3", 
+      "name": "\u041f\u043e\u0434\u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f 3"
     }
   }, 
   {
