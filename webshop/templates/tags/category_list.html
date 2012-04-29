@@ -1,19 +1,18 @@
 {% load i18n %}
 
-<h3>{% trans "Categories" %}</h3>
-
 {% load mptt_tags %}
-<div class="well">
-	<ul class="nav nav-list">
-		{% recursetree nodes %}
-			<li class="nav-header">
+<div class="row-fluid">
+	<div class="well sidebar-nav">
+		<ul class="nav nav-list">
+			<li class="nav-header">{% trans "Categories" %}</li>
+			{% recursetree nodes %}
+			<li>
 				<a href="{{ node.get_absolute_url }}">{{ node.name }}</a>
 				{% if not node.is_leaf_node %}
-					<ul class="children">
-						{{ children }}
-					</ul>
+					<ul class="children nav nav-list">{{ children }}</ul>
 				{% endif %}
 			</li>
-		{% endrecursetree %}
-	</ul>
+			{% endrecursetree %}
+		</ul>
+	</div>
 </div>
