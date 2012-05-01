@@ -44,8 +44,13 @@ def my_account_view(request, template_name="registration/my_account.html"):
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 
-def order_details_view():
-    pass
+def order_details_view(request, order_id, template_name="registration/order_details.html"):
+    """Информация о сделанном заказе"""
+    order = get_object_or_404(Order, id=order_id, user=request.user)
+    page_title = _(u'Order details for order #') + order_id
+    order_items = OrderItem.objects.filter(order=order)
+    return render_to_response(template_name, locals(),
+                              context_instance=RequestContext(request))
 
-def order_info_view():
+def orders_info_view(request):
     pass

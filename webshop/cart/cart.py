@@ -13,7 +13,7 @@ CART_ID_SESSION_KEY = 'cart_id'
 
 def _cart_id(request):
 	"""
-	Получение id корзины из cookies для пользователя, 
+	Получение id корзины из cookies для пользователя,
 	или установка новых cookies если не существуют
 	_модификатор для видимости в пределах модуля
 	"""
@@ -81,7 +81,7 @@ def update_cart(request):
 #		else:
 # TODO: добавить предупреждение
 #			remove_from_cart(request)
- 
+
 def remove_from_cart(request):
 	"""Удаляет выбранный товар из корзины"""
 	postdata = request.POST.copy()

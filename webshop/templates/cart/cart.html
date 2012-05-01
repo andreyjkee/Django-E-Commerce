@@ -25,7 +25,7 @@
 				</a>
 			</td>
 			<td>
-				$ {{ item.price }}
+				{{ item.price }} {% trans "руб." %}
 			</td>
 			<td class="right">
 				<form method="post" action="." class="cart">{% csrf_token %}
@@ -47,7 +47,7 @@
 						<i class="icon-trash icon-white"></i> {% trans "Remove" %}</button>
 				</form>
 			</td>
-			<td class="right">$ {{ item.total }}</td>
+			<td class="right">{{ item.total }} {% trans "руб." %}</td>
 		</tr>
 		{% endfor %}
 		{% else %}
@@ -60,15 +60,16 @@
 	</tbody>
 	<tfoot>
 		<tr>
-			<th class="right" colspan="5">{% trans "Cart Subtotal" %}:</th>
-			<th class="right">$ {{ cart_subtotal }}</th>
+			<th colspan="5">{% trans "Cart Subtotal" %}:</th>
+			<th>{{ cart_subtotal }} {% trans "руб." %}</th>
 		</tr>
 		{% if cart_items %}
 		<tr>
-			<th class="right" collspan="6">
+      <th colspan="5"></th>
+			<th class="right">
 				<a href="/urltochekout/" class="btn btn-success">
 					<i class="icon-shopping-cart icon-white"></i>
-					{% trans " Checkout Now" %}
+					{% trans " Checkout" %}
 				</a>
 			</th>
 		</tr>

@@ -19,9 +19,9 @@ urlpatterns = patterns('webshop.accounts.views',
 		{'template_name': 'registration/order_details.html'},
 		name='order_details'),
 	# Информация обо всех заказах
-	url(r'^order_info/$', 'order_info_view',
-		{'template_name': 'registration/order_info.html'},
-		name='order_info'),
+	url(r'^orders_info/$', 'orders_info_view',
+		{'template_name': 'registration/orders_info.html'},
+		name='orders_info'),
 )
 
 urlpatterns += patterns('django.contrib.auth.views',
