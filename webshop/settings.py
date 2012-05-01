@@ -155,15 +155,15 @@ INSTALLED_APPS = (
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'django.contrib.flatpages',
-	'webshop.catalog',
-	'webshop.cart',
-	'webshop.accounts',
-    'webshop.checkout',
 	# Uncomment the next line to enable the admin:
 	'django.contrib.admin',
 	# Uncomment the next line to enable admin documentation:
 	# 'django.contrib.admindocs',
 	# Custom modules
+    'webshop.catalog',
+    'webshop.cart',
+    'webshop.accounts',
+    'webshop.checkout',
 	'mptt',
 )
 
