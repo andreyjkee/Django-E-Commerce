@@ -122,6 +122,7 @@ MIDDLEWARE_CLASSES = (
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'webshop.SSLMiddleware.SSLRedirect',
 )
 
 ROOT_URLCONF = 'webshop.urls'
@@ -191,8 +192,7 @@ LOGGING = {
 }
 
 # Custom settings
-SSL = True
-ENABLE_SSL = True
+ENABLE_SSL = False
 SITE_NAME = _(u'Product magazine')
 META_KEYWORDS = _(u'products, online, shop, buy')
 META_DESCRIPTION = _(u'Product magazine is an online supplier of products')
