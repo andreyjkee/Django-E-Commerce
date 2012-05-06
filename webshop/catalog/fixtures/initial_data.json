@@ -107,7 +107,7 @@
       "brand": "\u0411\u0440\u044d\u043d\u0434", 
       "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u041f\u0440\u043e\u0434\u0443\u043a\u0442\u0430 2 \u0432 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438 2", 
       "old_price": "0", 
-      "updated_at": "2012-03-30T15:08:17.340", 
+      "updated_at": "2012-05-06T14:40:48.071", 
       "slug": "produkt-2-v-kategorii-2", 
       "is_bestseller": false, 
       "image": "123.jpg", 
@@ -131,17 +131,33 @@
       "is_active": true, 
       "brand": "\u0411\u0440\u044d\u043d\u0434", 
       "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0430 1", 
-      "old_price": "0", 
-      "updated_at": "2012-03-30T15:07:15.416", 
+      "old_price": "100", 
+      "updated_at": "2012-05-06T14:41:25.816", 
       "slug": "produkt-1-v-kategorii-1", 
       "is_bestseller": false, 
       "image": "123.jpg", 
       "created_at": "2012-03-30T15:07:15.416", 
-      "price": "100", 
+      "price": "120", 
       "categories": [
         2
       ], 
       "quantity": 1201
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "catalog.characteristictype", 
+    "fields": {
+      "name": "\u0412\u0435\u0441"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "catalog.characteristic", 
+    "fields": {
+      "characteristic_type": 1, 
+      "product": 2, 
+      "value": "100 \u0433\u0440."
     }
   }
 ]
