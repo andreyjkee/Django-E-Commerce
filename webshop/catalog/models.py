@@ -42,9 +42,6 @@ class ProductManager(models.Manager):
     def get_query_set(self):
         return super(ProductManager, self).get_query_set().filter(is_active=True)
 
-    def get_default_image(self, product):
-        return ProductImage.objects.get(product=product, default=True)
-
 
 class Product(models.Model):
     """Класс для товаров"""
@@ -72,8 +69,6 @@ class Product(models.Model):
                                         help_text=_(u'Categories for product'))
     objects = models.Manager()
     active = ProductManager()
-#    default_image = models.ForeignKey(ProductImage, verbose_name=_(u'Image'),
-#                                      help_text=_(u'Default image for this product'), blank=True)
 
     class Meta:
         db_table = 'products'
