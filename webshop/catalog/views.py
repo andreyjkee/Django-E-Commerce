@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_protect
 
 from webshop.cart import cart
 from webshop.catalog.forms import ProductAddToCartForm
-from webshop.catalog.models import Category, Product, Characteristic
+from webshop.catalog.models import Category, Product, Characteristic, ProductImage
 
 
 def index_view(request, template_name="catalog/index.html"):
@@ -23,6 +23,11 @@ def category_view(request, category_slug, template_name="catalog/category.html")
     """Представление для просмотра конкретной категории"""
     c = get_object_or_404(Category, slug=category_slug)
     products = c.product_set.all()
+    for p in products:
+        try:
+            p.image_url = ProductImage.objects.get(product=p, default=True).url
+        except Exception:
+            p.image_url = "/media/products/images/none.png"
     page_title = c.name
     meta_keywords = c.meta_keywords
     meta_description = c.meta_description
@@ -37,6 +42,10 @@ def product_view(request, product_slug, template_name="catalog/product.html"):
     page_title = p.name
     meta_keywords = p.meta_keywords
     meta_description = p.meta_description
+    try:
+        product_image = ProductImage.objects.get(product=p, default=True)
+    except Exception:
+        print "Image for product #%s not found" % p.id
     characteristics = Characteristic.objects.filter(product=p)
     # Проверка HTTP метода
     if request.method == 'POST':

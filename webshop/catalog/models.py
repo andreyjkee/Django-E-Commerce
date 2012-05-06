@@ -38,6 +38,14 @@ class Category(MPTTModel):
         return ('catalog_category', (), {'category_slug': self.slug})
 
 
+class ProductManager(models.Manager):
+    def get_query_set(self):
+        return super(ProductManager, self).get_query_set().filter(is_active=True)
+
+    def get_default_image(self, product):
+        return ProductImage.objects.get(product=product, default=True)
+
+
 class Product(models.Model):
     """Класс для товаров"""
     name = models.CharField(_(u'Name'), max_length=255, unique=True)
@@ -49,7 +57,6 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=9, decimal_places=2)
     old_price = models.DecimalField(max_digits=9, decimal_places=2,
                                     blank=True, default=0.00)
-    image = models.CharField(_(u'Image'), max_length=50)
     is_active = models.BooleanField(_(u'Active'), default=True)
     is_bestseller = models.BooleanField(_(u'Bestseller'), default=False) # Лучшие продажи
     is_featured = models.BooleanField(_(u'Featured'), default=False) # Отображать на главной
@@ -63,6 +70,10 @@ class Product(models.Model):
     updated_at = models.DateTimeField(_(u'Updated at'), auto_now=True)
     categories = models.ManyToManyField(Category, verbose_name=_(u'Categories'),
                                         help_text=_(u'Categories for product'))
+    objects = models.Manager()
+    active = ProductManager()
+#    default_image = models.ForeignKey(ProductImage, verbose_name=_(u'Image'),
+#                                      help_text=_(u'Default image for this product'), blank=True)
 
     class Meta:
         db_table = 'products'
@@ -88,6 +99,23 @@ class Product(models.Model):
             return self.price
         else:
             return None
+
+
+class ProductImage(models.Model):
+    """Изображения продуктов"""
+    image = models.FileField(_(u'Image'), upload_to='products/images/',
+                             help_text='Product image')
+    description = models.CharField(_(u'Description'), max_length=255, blank=True)
+    product = models.ForeignKey(Product, verbose_name=_(u'Product'),
+                                help_text=_(u'Referenced product'))
+    default = models.BooleanField(_(u'Default'), default=False)
+
+    class Meta:
+        db_table = 'product_images'
+
+    @property
+    def url(self):
+        return self.image.url
 
 
 class CharacteristicType(models.Model):
@@ -117,8 +145,3 @@ class Characteristic(models.Model):
         verbose_name_plural = _(u'Characteristics')
         # составной ключ, для избежания повторения одинковых характеристик у продукта
         unique_together = ('product', 'characteristic_type',)
-
-
-#TODO:
-#Несколько изображений для товара, отдельный класс images, поле image m2m
-

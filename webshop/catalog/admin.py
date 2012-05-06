@@ -4,15 +4,27 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
 from webshop.catalog.forms import ProductAdminForm
-from webshop.catalog.models import Product, Category, Characteristic, CharacteristicType
+from webshop.catalog.models import Product, Category, Characteristic, CharacteristicType, ProductImage
 
 
 class CharacteristicAdmin(admin.StackedInline):
+    """Добавление характеристик для продуктов"""
     model = Characteristic
     extra = 1
     fieldsets = [
         (_(u'Characteristic'), {'fields': ['characteristic_type']}),
         (_(u'Value'), {'fields': ['value']}),
+    ]
+
+
+class ProductImageAdmin(admin.StackedInline):
+    """Добавление изображений продукта"""
+    model = ProductImage
+    extra = 1
+    fieldsets = [
+        (_(u'Image'), {'fields': ['image']}),
+        (_(u'Description'), {'fields': ['description']}),
+        (_(u'Default'), {'fields': ['default']}),
     ]
 
 
@@ -26,7 +38,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display_links = ('name',)
     list_per_page = 50
     ordering = ['-created_at']
-    inlines = [CharacteristicAdmin, ]
+    inlines = [CharacteristicAdmin, ProductImageAdmin,]
     search_field = ['name', 'description', 'meta_keywords', 'meta_description']
     # exclude = ('created_at', 'updated_at',)
     readonly_fields = ('created_at', 'updated_at',)
