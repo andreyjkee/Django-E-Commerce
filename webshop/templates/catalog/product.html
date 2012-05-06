@@ -44,4 +44,30 @@
 	<br />
 	<h3>{% trans "Product Description" %}</h3>
 		{{ p.description }}
+  <br /><br />
+  <div class="row-fluid">
+    <div class="span5">
+      {% if characteristics %}
+      <table class="table table-striped table-bordered table-condensed">
+        <caption>{% trans "Product characteristics" %}</caption>
+          <thead>
+          <tr>
+            <th><b>{% trans "Characteristic" %}</b></th>
+            <th>{% trans "Value" %}</th>
+          </tr>
+          <tbody>
+            {% for characteristic in characteristics %}
+            <tr>
+              <th>{{ characteristic.characteristic_type }}</th>
+              <th>{{ characteristic.value }}</th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </thead>
+      </table>
+    {% else %}
+        {% trans "Characteristics not specified" %}
+    {% endif %}
+    </div>
+  </div>
 {% endblock %}
