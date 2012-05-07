@@ -1,9 +1,9 @@
 {% load i18n %}
-
 {% load mptt_tags %}
+
 <div class="row-fluid">
 	<div class="well sidebar-nav">
-		<ul class="nav nav-list">
+		<ul class="nav nav-list tabbar">
 			<li class="nav-header">{% trans "Categories" %}</li>
 			{% recursetree nodes %}
 			<li>
