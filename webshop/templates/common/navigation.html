@@ -11,7 +11,7 @@
       </a>
       <a class="brand" href="/">{% trans "Internet magazine" %}</a>
       <div class="nav-collapse">
-        <ul class="nav" id="nav">
+        <ul class="nav tabbar" id="nav">
             <li><a href="{% url catalog_home %}">{% trans "Catalog" %}</a></li>
             <li><a href="{% url show_cart %}">{% trans "Shopping Cart" %}</a></li>
 						{% if user.is_authenticated %}
