@@ -5,16 +5,20 @@
 	<h1>{{ c.name }}</h1>
 	{{ c.description }}
 	<br /><br />
-	{% for p in products %}
-		<div class="product_thumbnail">
-			<a href="{{ p.get_absolute_url }}">
-				<img src="{{ p.image_url }}"
-				alt="{{ p.name }}" />
-				<br />
-				{{ p.name }}
-        </a>
-        <br />
-        {{ p.price }} руб.
-		</div>
-	{% endfor %}
+  {% if products %}
+    {% for p in products %}
+      <div class="product_thumbnail">
+        <a href="{{ p.get_absolute_url }}">
+          <img src="{{ p.image_url }}"
+          alt="{{ p.name }}" />
+          <br />
+          {{ p.name }}
+          </a>
+          <br />
+          {{ p.price }} руб.
+      </div>
+    {% endfor %}
+  {% else %}
+    {% trans "Products for this category not found" %}
+  {% endif %}
 {% endblock %}
