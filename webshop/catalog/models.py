@@ -5,6 +5,12 @@ from django.utils.translation import ugettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
 
 
+class ActiveAbstractManager(models.Manager):
+    """Класс менеджер для фильтрации активных объектов"""
+    def get_query_set(self):
+        return super(ActiveAbstractManager, self).get_query_set().filter(is_active=True)
+
+
 class Category(MPTTModel):
     """Класс для категорий товаров"""
     name = models.CharField(_(u'Name'), max_length=50, unique=True)
@@ -23,6 +29,7 @@ class Category(MPTTModel):
     parent = TreeForeignKey('self', verbose_name=_(u'Parent category'),
                             related_name='children', blank=True,
                             help_text=_(u'Parent-category for current category'), null=True)
+    active = ActiveAbstractManager()
 
     class Meta:
         db_table = 'categories'
@@ -38,9 +45,10 @@ class Category(MPTTModel):
         return ('catalog_category', (), {'category_slug': self.slug})
 
 
-class ProductManager(models.Manager):
+class FeauturedProductManager(models.Manager):
+    """Класс менеджер для вывода продвигаемых продуктов"""
     def get_query_set(self):
-        return super(ProductManager, self).get_query_set().filter(is_active=True)
+        return super(FeauturedProductManager, self).get_query_set().filter(is_active=True, is_featured=True)
 
 
 class Product(models.Model):
@@ -68,7 +76,8 @@ class Product(models.Model):
     categories = models.ManyToManyField(Category, verbose_name=_(u'Categories'),
                                         help_text=_(u'Categories for product'))
     objects = models.Manager()
-    active = ProductManager()
+    active = ActiveAbstractManager()
+    feautured = FeauturedProductManager()
 
     class Meta:
         db_table = 'products'
