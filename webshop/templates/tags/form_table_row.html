@@ -1,0 +1,18 @@
+<div class="control-group">
+<label class="control-label" for="{{ form_field.auto_id }}">
+{% if form_field.field.required %}* {% endif %}{{ form_field.label }}
+</label>
+<div class="controls">
+  {% if form_field.errors %}
+  <ul class="control-group error">
+    {% for error in form_field.errors %}
+      <li>{{ form_field.label }}: {{ error }}</li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+  <input type="text" class="input-xlarge" id="{{ form_field.auto_id }}">
+{#  {{ form_field }}#}
+</div></div>
+
+
+

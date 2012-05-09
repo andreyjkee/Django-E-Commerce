@@ -67,10 +67,10 @@
 		<tr>
       <th colspan="5"></th>
 			<th class="right">
-				<a href="/urltochekout/" class="btn btn-success">
-					<i class="icon-shopping-cart icon-white"></i>
-					{% trans " Checkout" %}
-				</a>
+        <form method="post" action="." class="cart">{% csrf_token %}
+					<button class="btn btn-success" type="submit" name="checkout">
+					<i class="icon-shopping-cart icon-white"></i> {% trans " Checkout" %}</button>
+				</form>
 			</th>
 		</tr>
 		{% endif %}

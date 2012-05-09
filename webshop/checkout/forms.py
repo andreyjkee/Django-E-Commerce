@@ -73,9 +73,7 @@ class CheckoutForm(forms.ModelForm):
         # переопределяем аттрибуты по умолчанию
         for field in self.fields:
             self.fields[field].widget.attrs['size'] = '30'
-        self.fields['shipping_state'].widget.attrs['size'] = '3'
         self.fields['shipping_zip'].widget.attrs['size'] = '6'
-        self.fields['billing_state'].widget.attrs['size'] = '3'
         self.fields['billing_zip'].widget.attrs['size'] = '6'
         self.fields['credit_card_type'].widget.attrs['size'] = '1'
         self.fields['credit_card_expire_year'].widget.attrs['size'] = '1'
