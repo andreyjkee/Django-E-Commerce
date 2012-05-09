@@ -15,13 +15,19 @@ from webshop.catalog.models import Category, Product, Characteristic, ProductIma
 def index_view(request, template_name="catalog/index.html"):
     """Представление главной страницы"""
     page_title = _(u'Internet Magazine')
+    products = Product.feautured.all()
+    for p in products:
+        try:
+            p.image_url = ProductImage.objects.get(product=p, default=True).url
+        except Exception:
+            p.image_url = "/media/products/images/none.png"
     # Функция locals получает все поля словаря
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
 
 def category_view(request, category_slug, template_name="catalog/category.html"):
     """Представление для просмотра конкретной категории"""
-    c = get_object_or_404(Category, slug=category_slug)
+    c = get_object_or_404(Category.active, slug=category_slug)
     products = c.product_set.all()
     for p in products:
         try:
