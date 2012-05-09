@@ -97,3 +97,8 @@ def cart_subtotal(request):
 	for cart_item in cart_products:
 		cart_total += cart_item.product.price * cart_item.quantity
 	return cart_total
+
+def empty_cart(request):
+	"""Очищает корзину покупателя"""
+	user_cart = get_cart_items(request)
+	user_cart.delete()
