@@ -165,6 +165,7 @@ INSTALLED_APPS = (
     'webshop.cart',
     'webshop.accounts',
     'webshop.checkout',
+    'webshop.news',
 	'mptt',
 )
 

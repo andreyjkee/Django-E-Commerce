@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     url(r'^', include('webshop.catalog.urls')),
     url(r'^cart/', include('webshop.cart.urls')),
     url(r'^checkout/', include('webshop.checkout.urls')),
+    url(r'^', include('webshop.news.urls')),
 
     # enable language choice
     url(r'^i18n/', include('django.conf.urls.i18n')),
