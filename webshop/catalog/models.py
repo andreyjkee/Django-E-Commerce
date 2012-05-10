@@ -5,10 +5,10 @@ from django.utils.translation import ugettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
 
 
-class ActiveAbstractManager(models.Manager):
+class CommonActiveManager(models.Manager):
     """Класс менеджер для фильтрации активных объектов"""
     def get_query_set(self):
-        return super(ActiveAbstractManager, self).get_query_set().filter(is_active=True)
+        return super(CommonActiveManager, self).get_query_set().filter(is_active=True)
 
 
 class Category(MPTTModel):
@@ -29,7 +29,7 @@ class Category(MPTTModel):
     parent = TreeForeignKey('self', verbose_name=_(u'Parent category'),
                             related_name='children', blank=True,
                             help_text=_(u'Parent-category for current category'), null=True)
-    active = ActiveAbstractManager()
+    active = CommonActiveManager()
 
     class Meta:
         db_table = 'categories'
@@ -76,7 +76,7 @@ class Product(models.Model):
     categories = models.ManyToManyField(Category, verbose_name=_(u'Categories'),
                                         help_text=_(u'Categories for product'))
     objects = models.Manager()
-    active = ActiveAbstractManager()
+    active = CommonActiveManager()
     feautured = FeauturedProductManager()
 
     class Meta:
