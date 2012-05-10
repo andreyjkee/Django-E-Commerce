@@ -6,7 +6,12 @@ from django import template
 
 register = template.Library()
 
-@register.inclusion_tag("tags/form_table_row.html")
-def form_table_row(form_field):
-    """Возвращает список полей формы в виде таблицы"""
+@register.inclusion_tag("tags/form_row.html")
+def form_row(form_field):
+    """Возвращает вставку для поля типа LineEdit"""
+    return {'form_field': form_field }
+
+@register.inclusion_tag("tags/form_choice_field.html")
+def choice_field(form_field):
+    """Возвращает вставку для поля типа ComboBox"""
     return {'form_field': form_field }
