@@ -10,6 +10,7 @@ from django.views.decorators.csrf import csrf_protect
 from webshop.cart import cart
 from webshop.catalog.forms import ProductAddToCartForm
 from webshop.catalog.models import Category, Product, Characteristic, ProductImage
+from webshop.news.models import News
 
 
 def index_view(request, template_name="catalog/index.html"):
@@ -21,6 +22,8 @@ def index_view(request, template_name="catalog/index.html"):
             p.image_url = ProductImage.objects.get(product=p, default=True).url
         except Exception:
             p.image_url = "/media/products/images/none.png"
+    #Далее вывод новостей
+    news = News.objects.all()[:5]
     # Функция locals получает все поля словаря
     return render_to_response(template_name, locals(),
                               context_instance=RequestContext(request))
