@@ -1,0 +1,10 @@
+{% load i18n %}
+
+{% block content %}
+  <strong>{% trans "All news" %}:</strong><br />
+  {% for n in news %}
+    <a href="{{ n.get_absolute_url }}">{{ n.header }}</a>
+    {% if not forloop.last %}<br />
+    {% endif %}
+  {% endfor %}
+{% endblock %}
