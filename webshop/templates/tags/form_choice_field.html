@@ -1,0 +1,8 @@
+<div class="control-group">
+  <label class="control-label" for="{{ form_field.auto_id }}">
+    {% if form_field.field.required %}* {% endif %}{{ form_field.label }}
+  </label>
+  <div class="controls">
+    {{ form_field }}
+  </div>
+</div>

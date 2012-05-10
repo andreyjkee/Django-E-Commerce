@@ -1,0 +1,15 @@
+{% if form_field.errors %}
+<div class="control-group error">
+{% else %}
+<div class="control-group">
+{% endif %}
+  <label class="control-label" for="{{ form_field.auto_id }}">
+  {% if form_field.field.required %}* {% endif %}{{ form_field.label }}
+  </label>
+  <div class="controls">
+    <input type="text" class="input-xlarge" id="{{ form_field.auto_id }}">
+    {% for error in form_field.errors %}
+      <span class="help-inline">{{ error }}</span>
+    {% endfor %}
+  </div>
+</div>
