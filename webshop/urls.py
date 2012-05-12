@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^cart/', include('webshop.cart.urls')),
     url(r'^checkout/', include('webshop.checkout.urls')),
     url(r'^', include('webshop.news.urls')),
+    url(r'^search/', include('webshop.search.urls')),
 
     # enable language choice
     url(r'^i18n/', include('django.conf.urls.i18n')),
