@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-28 16:42+0400\n"
+"POT-Creation-Date: 2012-05-12 14:40+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,15 +24,15 @@ msgstr ""
 msgid "Russian"
 msgstr ""
 
-#: .\settings.py:190
+#: .\settings.py:197
 msgid "Product magazine"
 msgstr ""
 
-#: .\settings.py:191
+#: .\settings.py:198
 msgid "products, online, shop, buy"
 msgstr ""
 
-#: .\settings.py:192
+#: .\settings.py:199
 msgid "Product magazine is an online supplier of products"
 msgstr ""
 
@@ -40,9 +40,43 @@ msgstr ""
 msgid "Page Not Found"
 msgstr ""
 
-#: .\cart\views.py:14 .\templates\tags\footer.html.py:8
-#: .\templates_old\tags\footer.html.py:8
+#: .\accounts\views.py:18
+msgid "User Registration"
+msgstr ""
+
+#: .\accounts\views.py:41 .\templates\common\navigation.html.py:17
+msgid "My Account"
+msgstr ""
+
+#: .\accounts\views.py:50
+msgid "Order details for order #"
+msgstr ""
+
+#: .\cart\views.py:16 .\templates\tags\footer.html.py:8
 msgid "Shopping cart"
+msgstr ""
+
+#: .\catalog\admin.py:15 .\templates\catalog\product.html.py:60
+msgid "Characteristic"
+msgstr ""
+
+#: .\catalog\admin.py:16 .\catalog\models.py:143
+#: .\templates\catalog\product.html.py:61
+msgid "Value"
+msgstr ""
+
+#: .\catalog\admin.py:25 .\catalog\models.py:111
+msgid "Image"
+msgstr ""
+
+#: .\catalog\admin.py:26 .\catalog\models.py:21 .\catalog\models.py:70
+#: .\catalog\models.py:113 .\news\models.py:14
+#: .\templates\catalog\product.html.py:46
+msgid "Description"
+msgstr ""
+
+#: .\catalog\admin.py:27 .\catalog\models.py:116
+msgid "Default"
 msgstr ""
 
 #: .\catalog\forms.py:17
@@ -57,227 +91,473 @@ msgstr ""
 msgid "Cookies must be enabled."
 msgstr ""
 
-#: .\catalog\models.py:9 .\catalog\models.py:39
+#: .\catalog\models.py:17 .\catalog\models.py:57 .\catalog\models.py:128
 msgid "Name"
 msgstr ""
 
-#: .\catalog\models.py:10 .\catalog\models.py:40
+#: .\catalog\models.py:18 .\catalog\models.py:58 .\news\models.py:13
 msgid "Slug"
 msgstr ""
 
-#: .\catalog\models.py:11
+#: .\catalog\models.py:19
 msgid "Slug for product url created from name."
 msgstr ""
 
-#: .\catalog\models.py:13 .\catalog\models.py:53
-msgid "Description"
-msgstr ""
-
-#: .\catalog\models.py:14 .\catalog\models.py:49
+#: .\catalog\models.py:22 .\catalog\models.py:66
 msgid "Active"
 msgstr ""
 
-#: .\catalog\models.py:15 .\catalog\models.py:54
+#: .\catalog\models.py:23 .\catalog\models.py:71
 msgid "Meta keywords"
 msgstr ""
 
-#: .\catalog\models.py:16 .\catalog\models.py:55
+#: .\catalog\models.py:24 .\catalog\models.py:72
 msgid "Comma-delimited set of SEO keywords for meta tag"
 msgstr ""
 
-#: .\catalog\models.py:18 .\catalog\models.py:56
+#: .\catalog\models.py:26 .\catalog\models.py:73
 msgid "Meta description"
 msgstr ""
 
-#: .\catalog\models.py:19
+#: .\catalog\models.py:27
 msgid "Content for description meta tags"
 msgstr ""
 
-#: .\catalog\models.py:20 .\catalog\models.py:58
+#: .\catalog\models.py:28 .\catalog\models.py:75
 msgid "Created at"
 msgstr ""
 
-#: .\catalog\models.py:21 .\catalog\models.py:59
+#: .\catalog\models.py:29 .\catalog\models.py:76
 msgid "Updated at"
 msgstr ""
 
-#: .\catalog\models.py:26 .\catalog\models.py:60
-#: .\templates\tags\category_list.html.py:3
-#: .\templates_old\tags\category_list.html.py:3
+#: .\catalog\models.py:30
+msgid "Parent category"
+msgstr ""
+
+#: .\catalog\models.py:32
+msgid "Parent-category for current category"
+msgstr ""
+
+#: .\catalog\models.py:38 .\catalog\models.py:77
+#: .\templates\tags\category_list.html.py:7
 msgid "Categories"
 msgstr ""
 
-#: .\catalog\models.py:41
+#: .\catalog\models.py:59
 msgid "Unique value for product page URL, created from name."
 msgstr ""
 
-#: .\catalog\models.py:42 .\templates\catalog\product.html.py:10
-#: .\templates_old\catalog\product.html.py:10
+#: .\catalog\models.py:60 .\templates\catalog\product.html.py:14
 msgid "Brand"
 msgstr ""
 
-#: .\catalog\models.py:43 .\templates\catalog\product.html.py:12
-#: .\templates_old\catalog\product.html.py:12
+#: .\catalog\models.py:61 .\templates\catalog\product.html.py:16
 msgid "SKU"
 msgstr ""
 
-#: .\catalog\models.py:44
+#: .\catalog\models.py:62
 msgid "Stock-keeping unit"
 msgstr ""
 
-#: .\catalog\models.py:48
-msgid "Image"
-msgstr ""
-
-#: .\catalog\models.py:50
+#: .\catalog\models.py:67
 msgid "Bestseller"
 msgstr ""
 
-#: .\catalog\models.py:51
+#: .\catalog\models.py:68
 msgid "Featured"
 msgstr ""
 
-#: .\catalog\models.py:52 .\templates\cart\cart.html.py:32
-#: .\templates_old\cart\cart.html.py:32
+#: .\catalog\models.py:69 .\templates\cart\cart.html.py:12
+#: .\templates\checkout\receipt.html.py:13
 msgid "Quantity"
 msgstr ""
 
-#: .\catalog\models.py:57
+#: .\catalog\models.py:74
 msgid "Content for description meta tag"
 msgstr ""
 
-#: .\catalog\models.py:61
+#: .\catalog\models.py:78
 msgid "Categories for product"
 msgstr ""
 
-#: .\catalog\models.py:66
+#: .\catalog\models.py:86
 msgid "Products"
+msgstr ""
+
+#: .\catalog\models.py:114 .\catalog\models.py:144
+#: .\templates\cart\cart.html.py:10 .\templates\checkout\receipt.html.py:11
+msgid "Product"
+msgstr ""
+
+#: .\catalog\models.py:115 .\catalog\models.py:145
+msgid "Referenced product"
+msgstr ""
+
+#: .\catalog\models.py:133
+msgid "Characteristics Types"
+msgstr ""
+
+#: .\catalog\models.py:150 .\templates\catalog\product.html.py:47
+msgid "Characteristics"
 msgstr ""
 
 #: .\catalog\views.py:18
 msgid "Internet Magazine"
 msgstr ""
 
-#: .\templates\404.html.py:5 .\templates_old\404.html.py:5
+#: .\checkout\checkout.py:61
+msgid "There is a problem with your credit card."
+msgstr ""
+
+#: .\checkout\checkout.py:63
+msgid "Error processing your order."
+msgstr ""
+
+#: .\checkout\forms.py:93
+msgid "The credit card you entered is invalid."
+msgstr ""
+
+#: .\checkout\forms.py:100
+msgid ""
+"\n"
+"            Enter a valid phone number with area code.(e.g.8-920-351-21-21)"
+msgstr ""
+
+#: .\checkout\models.py:23
+msgid "Submitted"
+msgstr ""
+
+#: .\checkout\models.py:24
+msgid "Processed"
+msgstr ""
+
+#: .\checkout\models.py:25
+msgid "Shipped"
+msgstr ""
+
+#: .\checkout\models.py:26
+msgid "Cancelled"
+msgstr ""
+
+#: .\checkout\models.py:56
+msgid "Order #"
+msgstr ""
+
+#: .\checkout\views.py:32
+msgid "Correct the errors below"
+msgstr ""
+
+#: .\checkout\views.py:35 .\templates\checkout\checkout.html.py:8
+msgid "Checkout"
+msgstr ""
+
+#: .\news\models.py:12
+msgid "Header"
+msgstr ""
+
+#: .\news\models.py:15
+msgid "Created"
+msgstr ""
+
+#: .\news\models.py:16
+msgid "Updated"
+msgstr ""
+
+#: .\news\models.py:17
+msgid "User"
+msgstr ""
+
+#: .\news\models.py:18
+msgid "Views count"
+msgstr ""
+
+#: .\news\models.py:24
+msgid "Post"
+msgstr ""
+
+#: .\news\models.py:25 .\templates\catalog\index.html.py:7
+msgid "News"
+msgstr ""
+
+#: .\news\models.py:33
+msgid "Published today?"
+msgstr ""
+
+#: .\templates\404.html.py:5
 msgid "Страница не найдена. Приносим Вам свои извинения."
 msgstr ""
 
-#: .\templates\404.html.py:6 .\templates_old\404.html.py:6
+#: .\templates\404.html.py:6
 msgid "Проверьте что вы ввели правильный адрес в строке браузера."
 msgstr ""
 
-#: .\templates\catalog.html.py:7 .\templates_old\catalog.html.py:7
+#: .\templates\catalog.html.py:8
 msgid "Skip to main content"
 msgstr ""
 
-#: .\templates\catalog.html.py:13 .\templates_old\catalog.html.py:13
-msgid "Internet magazine"
+#: .\templates\catalog.html.py:9
+msgid "Banner"
 msgstr ""
 
-#: .\templates\index.html.py:5 .\templates_old\index.html.py:5
+#: .\templates\index.html.py:5
 msgid "Welcome!"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:7 .\templates_old\cart\cart.html.py:7
+#: .\templates\cart\cart.html.py:7
 msgid "Your Shopping Cart"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:10 .\templates_old\cart\cart.html.py:10
-msgid "Product"
-msgstr ""
-
-#: .\templates\cart\cart.html.py:11 .\templates\catalog\product.html.py:30
-#: .\templates_old\cart\cart.html.py:11
-#: .\templates_old\catalog\product.html.py:30
+#: .\templates\cart\cart.html.py:11 .\templates\catalog\product.html.py:34
+#: .\templates\checkout\receipt.html.py:12
 msgid "Price"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:15 .\templates_old\cart\cart.html.py:15
+#: .\templates\cart\cart.html.py:15 .\templates\checkout\receipt.html.py:14
 msgid "Total"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:37 .\templates_old\cart\cart.html.py:37
+#: .\templates\cart\cart.html.py:28 .\templates\cart\cart.html.py:50
+#: .\templates\cart\cart.html.py:64 .\templates\catalog\product.html.py:30
+#: .\templates\catalog\product.html.py:32
+#: .\templates\catalog\product.html.py:34
+msgid "руб."
+msgstr ""
+
+#: .\templates\cart\cart.html.py:40
 msgid "Update"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:43 .\templates_old\cart\cart.html.py:43
+#: .\templates\cart\cart.html.py:47
 msgid "Remove"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:52 .\templates_old\cart\cart.html.py:52
+#: .\templates\cart\cart.html.py:56
 msgid "Your cart is empty"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:59 .\templates_old\cart\cart.html.py:59
+#: .\templates\cart\cart.html.py:63
 msgid "Cart Subtotal"
 msgstr ""
 
-#: .\templates\cart\cart.html.py:66 .\templates_old\cart\cart.html.py:66
-msgid "Checkout Now"
+#: .\templates\cart\cart.html.py:72
+msgid " Checkout"
 msgstr ""
 
-#: .\templates\catalog\index.html.py:5 .\templates_old\catalog\index.html.py:5
+#: .\templates\catalog\category.html.py:22
+msgid "Products for this category not found"
+msgstr ""
+
+#: .\templates\catalog\index.html.py:5
 msgid "Welcome to our shop!"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:15
-#: .\templates_old\catalog\product.html.py:15
+#: .\templates\catalog\index.html.py:18
+msgid "Feautured products"
+msgstr ""
+
+#: .\templates\catalog\index.html.py:32
+msgid "Feautured products not found"
+msgstr ""
+
+#: .\templates\catalog\product.html.py:19
 msgid ""
 "\n"
-"\t\tIn category:\n"
-"\t\t"
+"        In category:\n"
+"      "
 msgid_plural ""
 "\n"
-"\t\tIn categories:\n"
-"\t"
+"        In categories:\n"
+"      "
 msgstr[0] ""
 msgstr[1] ""
 
-#: .\templates\catalog\product.html.py:26
-#: .\templates_old\catalog\product.html.py:26
+#: .\templates\catalog\product.html.py:30
 msgid "Was"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:28
-#: .\templates_old\catalog\product.html.py:28
+#: .\templates\catalog\product.html.py:32
 msgid "Now"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:36
-#: .\templates_old\catalog\product.html.py:36
+#: .\templates\catalog\product.html.py:39
+#: .\templates\catalog\product.html.py:40
 msgid "Add To Cart"
 msgstr ""
 
-#: .\templates\catalog\product.html.py:41
-#: .\templates_old\catalog\product.html.py:41
-msgid "Product Description"
+#: .\templates\catalog\product.html.py:48
+msgid "Feedback"
 msgstr ""
 
-#: .\templates\tags\cart_box.html.py:6 .\templates_old\tags\cart_box.html.py:6
+#: .\templates\catalog\product.html.py:57
+msgid "Product characteristics"
+msgstr ""
+
+#: .\templates\catalog\product.html.py:74
+msgid "Characteristics not specified"
+msgstr ""
+
+#: .\templates\checkout\checkout.html.py:18
+msgid "Contact Info"
+msgstr ""
+
+#: .\templates\checkout\checkout.html.py:23
+msgid "Shipping Info"
+msgstr ""
+
+#: .\templates\checkout\checkout.html.py:32
+msgid "Billing Info"
+msgstr ""
+
+#: .\templates\checkout\checkout.html.py:40
+msgid "Credit Card Info"
+msgstr ""
+
+#: .\templates\checkout\checkout.html.py:52
+msgid " Place order"
+msgstr ""
+
+#: .\templates\checkout\checkout.html.py:56
+msgid "Warning"
+msgstr ""
+
+#: .\templates\checkout\checkout.html.py:57
+msgid "Required fields"
+msgstr ""
+
+#: .\templates\checkout\receipt.html.py:6
+msgid "Your order has been placed!"
+msgstr ""
+
+#: .\templates\checkout\receipt.html.py:7
+msgid "Your Order Number is: {{ order.id }}"
+msgstr ""
+
+#: .\templates\checkout\receipt.html.py:20
+msgid "Order Total"
+msgstr ""
+
+#: .\templates\common\navigation.html.py:12
+msgid "Internet magazine"
+msgstr ""
+
+#: .\templates\common\navigation.html.py:15
+#: .\templates\tags\cart_box.html.py:6
 msgid "Shopping Cart"
 msgstr ""
 
-#: .\templates\tags\cart_box.html.py:8 .\templates_old\tags\cart_box.html.py:8
+#: .\templates\common\navigation.html.py:18
+msgid "Logout"
+msgstr ""
+
+#: .\templates\common\navigation.html.py:20
+#: .\templates\registration\login.html.py:16
+#: .\templates\registration\login.html.py:17
+#: .\templates\registration\login.html.py:28
+msgid "Login"
+msgstr ""
+
+#: .\templates\common\navigation.html.py:24
+msgid "Search..."
+msgstr ""
+
+#: .\templates\news\news_all.html.py:4
+msgid "All news"
+msgstr ""
+
+#: .\templates\registration\logged_out.html.py:4
+msgid "You are Logged Out!"
+msgstr ""
+
+#: .\templates\registration\login.html.py:9
+msgid "Important"
+msgstr ""
+
+#: .\templates\registration\login.html.py:10
+msgid "You entered an invalid username or password."
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:5
+msgid "My account"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:6
+msgid "Welcome"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:9
+msgid "Order history"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:12
+msgid "Order"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:12
+msgid "view"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:16
+msgid "You have no past orders"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:21
+msgid "Account settings"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:25
+msgid "Change password"
+msgstr ""
+
+#: .\templates\registration\my_account.html.py:29
+msgid "Edit Billing/Shipping information"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html.py:5
+msgid "Password Changed"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html.py:6
+msgid "Your password has been changed succesfully."
+msgstr ""
+
+#: .\templates\registration\password_change_done.html.py:7
+msgid "Continue shopping"
+msgstr ""
+
+#: .\templates\registration\password_change_form.html.py:7
+msgid "Change Password"
+msgstr ""
+
+#: .\templates\registration\password_change_form.html.py:11
+msgid "Change"
+msgstr ""
+
+#: .\templates\registration\register.html.py:6
+#: .\templates\registration\register.html.py:12
+msgid "Register"
+msgstr ""
+
+#: .\templates\registration\register.html.py:7
+msgid "Sign Up For Your Account"
+msgstr ""
+
+#: .\templates\tags\cart_box.html.py:8
 msgid "Item"
 msgstr ""
 
 #: .\templates\tags\footer.html.py:2 .\templates\tags\navigation.html.py:3
-#: .\templates_old\tags\footer.html.py:2
-#: .\templates_old\tags\navigation.html.py:3
 msgid "Home"
 msgstr ""
 
 #: .\templates\tags\navigation.html.py:4
-#: .\templates_old\tags\navigation.html.py:4
 msgid "About"
 msgstr ""
 
 #: .\templates\tags\navigation.html.py:5
-#: .\templates_old\tags\navigation.html.py:5
 msgid "Privacy"
 msgstr ""
 
 #: .\templates\tags\navigation.html.py:6
-#: .\templates_old\tags\navigation.html.py:6
 msgid "Contact"
 msgstr ""
