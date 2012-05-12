@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 from django.db import models
+from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
 
@@ -39,7 +40,7 @@ class Category(MPTTModel):
     def __unicode__(self):
         return self.name
 
-    @models.permalink
+    @permalink
     def get_absolute_url(self):
         """Генерация постоянных ссылок на категории"""
         return ('catalog_category', (), {'category_slug': self.slug})
@@ -87,7 +88,7 @@ class Product(models.Model):
     def __unicode__(self):
         return self.name
 
-    @models.permalink
+    @permalink
     def get_absolute_url(self):
         """Генерация постоянных ссылок на товары"""
         return ('catalog_product', (), {'product_slug': self.slug})
