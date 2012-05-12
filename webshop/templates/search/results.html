@@ -1,0 +1,20 @@
+{% extends "catalog.html" %}
+{% load i18n %}
+{% load search_tags %}
+
+{% block content %}
+  <h1>{% trans "Search Results for" %}&nbsp;: '{{ query }}'</h1>
+  <ol>
+  {% for p in results %}
+    <li><strong><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></strong></li>
+    {{ p.description|slice:":200" }}
+    <br />
+  {% empty %}
+  <div class="alert alert-block">
+    {% trans "No products were found matching those search terms." %}
+  </div>
+  {% endfor %}
+  </ol>
+  <div>&nbsp;</div>
+  {% pagination_links request paginator %}
+{% endblock %}
