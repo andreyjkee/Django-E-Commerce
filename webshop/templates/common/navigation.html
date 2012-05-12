@@ -1,5 +1,6 @@
 {% block navigation %}
 {% load i18n %}
+{% load search_tags %}
 
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
@@ -20,9 +21,7 @@
 							<li><a href="{% url django.contrib.auth.views.login %}">{% trans "Login" %}</a></li>
 						{% endif %}
         </ul>
-        <form class="navbar-search pull-right" action=".">
-          <input type="text" class="search-query span2" placeholder="{% trans "Search..." %}" />
-        </form>
+        {% search_box request %}
       </div>
     </div>
   </div>
