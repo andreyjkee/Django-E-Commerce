@@ -1,0 +1,12 @@
+[
+  {
+    "pk": 11, 
+    "model": "search.searchterm", 
+    "fields": {
+      "ip_address": "127.0.0.1", 
+      "query": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442", 
+      "search_date": "2012-05-12T21:23:09.398", 
+      "user": 1
+    }
+  }
+]
