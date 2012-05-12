@@ -4,6 +4,7 @@ from datetime import datetime
 
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -32,7 +33,7 @@ class News(models.Model):
         return self.created.date() == datetime.date.today()
     was_published_today.short_description = _(u'Published today?')
 
-    @models.permalink
+    @permalink
     def get_absolute_url(self):
         """Генерация постоянных ссылок на новости"""
         return ('news', (), {'news_slug': self.slug})
