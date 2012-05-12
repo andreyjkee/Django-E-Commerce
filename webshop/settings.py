@@ -166,7 +166,8 @@ INSTALLED_APPS = (
     'webshop.accounts',
     'webshop.checkout',
     'webshop.news',
-	'mptt',
+    'webshop.search',
+    'mptt',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -199,3 +200,4 @@ META_KEYWORDS = _(u'products, online, shop, buy')
 META_DESCRIPTION = _(u'Product magazine is an online supplier of products')
 LOGIN_REDIRECT_URL = '/accounts/my_account/'
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 90 # 90 дней на хранение cookies
+PRODUCTS_PER_PAGE = 12
