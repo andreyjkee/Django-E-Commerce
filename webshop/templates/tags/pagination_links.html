@@ -1,0 +1,19 @@
+{% load i18n %}
+
+{% if p.has_other_pages %}
+    {% if p.has_previous %}
+        <a href="{{ request.path }}?{{ params }}&amp;page={{ p.previous_page_number }}">
+            &laquo; {% trans "Previous" %}
+        </a>
+    {% else %}
+        &laquo; Previous
+    {% endif %}
+    | {% trans "Page" %} {{ p.number }} {% trans "of" %} {{ paginator.num_pages }} |
+    {% if p.has_next %}
+        <a href="{{ request.path }}?{{ params }}&amp;page={{ p.next_page_number }}">
+            {% trans "Next" %} &raquo;
+        </a>
+    {% else %}
+      {% trans "Next" %} &raquo;
+    {% endif %}
+{% endif %}

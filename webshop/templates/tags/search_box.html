@@ -1,0 +1,5 @@
+{% load i18n %}
+
+<form class="navbar-search pull-right" id="id_query" action="{% url search_results %}" method="get">
+    <input name="query" id="{{ form.auto_id }}" type="text" value="Search" class="search-query span2" placeholder="{% trans "Search..." %}" />
+</form>
