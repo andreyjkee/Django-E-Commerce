@@ -4,6 +4,14 @@
 {% load checkout_tags %}
 
 {% block content %}
+  {% if not request.user.is_authenticated %}
+    <div class="row-fluid">
+      <a href="{% url login %}?next={{ request.path }}">
+      {% trans "Have an account" %}?<br />{% trans "Sign in now" %}!
+      </a>
+    </div>
+  {% endif %}
+
   <div class="row-fluid">
     <h1>{% trans "Checkout" %}</h1>
     {% if error_message %}
@@ -13,7 +21,7 @@
       </div>
     </div>
     {% endif %}
-    <form class="form-horizontal" action="." method="post">
+    <form class="form-horizontal" action="." method="post">{% csrf_token %}
       <fieldset>
         <legend>{% trans "Contact Info" %}</legend>
           {% form_row form.email %}
@@ -48,7 +56,7 @@
   </div>
 
   <form method="post" action="." class="cart">{% csrf_token %}
-    <button class="btn btn-success" type="submit" name="place_order">
+    <button class="btn btn-success" type="submit">
     <i class="icon-shopping-cart icon-white"></i> {% trans " Place order" %}</button>
   </form>
 

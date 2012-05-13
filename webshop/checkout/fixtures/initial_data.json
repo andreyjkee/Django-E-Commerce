@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "pk": 1, 
+    "model": "checkout.order", 
+    "fields": {
+      "status": 1, 
+      "shipping_name": "dsdsgds", 
+      "billing_address": "fdsfsdf", 
+      "last_updated": "2012-05-13T17:58:16.714", 
+      "shipping_city": "dsadsad", 
+      "shipping_zip": "325324", 
+      "billing_name": "dsffdsfs", 
+      "billing_country": "sdfff", 
+      "shipping_address_1": "sdasdasd", 
+      "phone": "555-555-5555", 
+      "billing_zip": "532524", 
+      "shipping_address_2": "", 
+      "user": 1, 
+      "date": "2012-05-13T17:50:48.021", 
+      "shipping_country": "dsfsdf", 
+      "ip_address": "127.0.0.1", 
+      "email": "andreyjkee@gmail.com", 
+      "transaction_id": "", 
+      "billing_city": "fsdfdsf"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "checkout.orderitem", 
+    "fields": {
+      "product": 2, 
+      "order": 1, 
+      "price": "22", 
+      "quantity": 1
+    }
+  }
+]

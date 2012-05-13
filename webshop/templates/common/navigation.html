@@ -19,6 +19,7 @@
 							<li><a href="{% url django.contrib.auth.views.logout %}">{% trans "Logout" %}</a></li>
 						{% else %}
 							<li><a href="{% url django.contrib.auth.views.login %}">{% trans "Login" %}</a></li>
+              <li><a href="{% url register %}">{% trans "Register" %}</a></li>
 						{% endif %}
         </ul>
         {% search_box request %}

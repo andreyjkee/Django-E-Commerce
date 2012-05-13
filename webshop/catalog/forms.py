@@ -12,7 +12,7 @@ class ProductAdminForm(forms.ModelForm):
 		model = Product
 
 	def clean_price(self):
-		"Проверка поля цена"
+		"""Проверка поля цена"""
 		if self.cleaned_data['price'] <= 0:
 			raise forms.ValidationError(_(u'Price must be greater than zero.'))
 		return self.cleaned_data['price']

@@ -10,6 +10,7 @@ from webshop.checkout.forms import CheckoutForm
 from webshop.checkout.models import Order, OrderItem
 from webshop.checkout import checkout
 from webshop.cart import cart
+from webshop.accounts import profile
 
 
 def checkout_view(request, template_name='checkout/checkout.html'):
@@ -30,6 +31,11 @@ def checkout_view(request, template_name='checkout/checkout.html'):
                 return HttpResponseRedirect(receipt_url)
         else:
             error_message = _(u'Correct the errors below')
+            if request.user.is_authenticated():
+                user_profile = profile.retrieve(request)
+                form = CheckoutForm(instance=user_profile)
+            else:
+                form = CheckoutForm()
     else:
         form = CheckoutForm()
     page_title = _(u'Checkout')

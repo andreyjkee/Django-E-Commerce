@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 #import urllib
+import random
 
 from django.utils.translation import ugettext_lazy as _
 from django.core import urlresolvers
@@ -9,6 +10,7 @@ from django.core import urlresolvers
 from webshop.cart import cart
 from webshop.checkout.models import Order, OrderItem
 from webshop.checkout.forms import CheckoutForm
+from webshop.accounts import profile
 #from webshop.checkout import authnet
 #from webshop import settings
 
@@ -54,7 +56,8 @@ def process(request):
 
     response = [1, 1, 1, 1, 1, 1]
     if response[0] == TransactionResultType.APPROVED:
-        transaction_id = response[6]
+        #transaction_id = response[6]
+        transaction_id = random.randint(1, 999999)
         order = create_order(request, transaction_id)
         results = {'order_number': order.id, 'message': u''}
     if response[0] == TransactionResultType.DECLINED:
@@ -95,10 +98,12 @@ def create_order(request, transaction_id):
             oi.save()
         # Очищаем корзину после оформления заказа
         cart.empty_cart(request)
-
-        # сохраняем информацию о профиле пользователя
+        # Сохраняем введенные данные для будующих заказов
         if request.user.is_authenticated():
-            from webshop.accounts import profile
             profile.set(request)
 
+        # Сохраняем информацию о профиле пользователя
+        if request.user.is_authenticated():
+            profile.set(request)
+    # Возвращаем объект - новый заказа
     return order

@@ -26,4 +26,18 @@ class OrderAdmin(admin.ModelAdmin):
                                'billing_city', 'billing_zip', 'billing_country')})
         )
 
+    def save_model(self, request, obj, form, change):
+        """
+        Переопределяем метод сохранения модели
+        чтобы запомнить пользователя
+        """
+        # Сохраняем IP если он не был получен ранее
+        # Для демонстрации добавления заказа через админку
+        if obj.ip_address is None:
+            obj.user = request.user
+            obj.ip_address = request.META.get('REMOTE_ADDR')
+            obj.save()
+
+
+
 admin.site.register(Order, OrderAdmin)

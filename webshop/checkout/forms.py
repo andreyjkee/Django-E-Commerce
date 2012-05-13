@@ -6,6 +6,7 @@ import re
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
+from webshop import settings
 from models import Order
 
 
@@ -89,8 +90,10 @@ class CheckoutForm(forms.ModelForm):
         """Проверка кредитной карты"""
         cc_number = self.cleaned_data['credit_card_number']
         stripped_cc_number = strip_non_numbers(cc_number)
-        if not cardLuhnChecksumIsValid(stripped_cc_number):
-            raise forms.ValidationError(_(u'The credit card you entered is invalid.'))
+        # Проверка делается только если выключена отладка
+        if not settings.DEBUG:
+            if not cardLuhnChecksumIsValid(stripped_cc_number):
+                raise forms.ValidationError(_(u'The credit card you entered is invalid.'))
 
     def clean_phone(self):
         """Проверка телефонного номера (>10 цифр)"""

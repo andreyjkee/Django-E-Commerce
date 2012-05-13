@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "pk": 1, 
+    "model": "cart.cartitem", 
+    "fields": {
+      "date_added": "2012-05-12T21:34:53.328", 
+      "product": 2, 
+      "cart_id": "lLtRQGaR&Hy8GQPt%8i3aDj(enf$k17r0n$)G5MCjiAvp7rCoo", 
+      "quantity": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "cart.cartitem", 
+    "fields": {
+      "date_added": "2012-05-13T16:46:51.024", 
+      "product": 1, 
+      "cart_id": "lLtRQGaR&Hy8GQPt%8i3aDj(enf$k17r0n$)G5MCjiAvp7rCoo", 
+      "quantity": 1
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "cart.cartitem", 
+    "fields": {
+      "date_added": "2012-05-13T19:04:25.789", 
+      "product": 1, 
+      "cart_id": "a9PQpRhVKvLVtwWobopACbS6C^mT4zVxY7PLVVPt1C!8Qc*kag", 
+      "quantity": 1
+    }
+  }
+]

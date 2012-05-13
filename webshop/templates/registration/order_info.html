@@ -1,0 +1,24 @@
+{% extends "catalog.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h1>{% trans "Edit Order Information" %}</h1>
+  {{ response }}
+  {% if error_message %}
+    <ul class="alert alert-error">
+        <li>{{ error_message }}</li>
+    </ul>
+  {% endif %}
+  <form action="." method="post">{% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <table>
+    <tr>
+        <th colspan="2">
+            <input type="submit" value="{% trans "Save Information" %}" class="submit" />
+        </th>
+    </tr>
+    </table>
+</form>
+{% endblock %}

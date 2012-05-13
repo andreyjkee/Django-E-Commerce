@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block content %}
-	<form action="../cart" method="post">
+	<form action="." method="post">{% csrf_token %}
 		<table summary="{% trans "Register" %}" id="register">
 			<caption>{% trans "Sign Up For Your Account" %}</caption>
 			{{ form.as_table }}
