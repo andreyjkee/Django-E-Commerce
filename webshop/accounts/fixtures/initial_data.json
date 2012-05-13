@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "pk": 1, 
+    "model": "accounts.userprofile", 
+    "fields": {
+      "billing_country": "sdfff", 
+      "shipping_name": "dsdsgds", 
+      "billing_address": "fdsfsdf", 
+      "shipping_city": "dsadsad", 
+      "shipping_zip": "325324", 
+      "billing_name": "dsffdsfs", 
+      "shipping_address_1": "sdasdasd", 
+      "phone": "555-555-5555", 
+      "billing_zip": "532524", 
+      "user": 1, 
+      "shipping_country": "ewfwefewf", 
+      "email": "andreyjkee@gmail.com", 
+      "shipping_address_2": "gdsgds", 
+      "billing_city": "fsdfdsf"
+    }
+  }
+]

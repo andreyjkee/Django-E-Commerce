@@ -28,5 +28,15 @@
       "cart_id": "a9PQpRhVKvLVtwWobopACbS6C^mT4zVxY7PLVVPt1C!8Qc*kag", 
       "quantity": 1
     }
+  }, 
+  {
+    "pk": 4, 
+    "model": "cart.cartitem", 
+    "fields": {
+      "date_added": "2012-05-13T21:14:54.940", 
+      "product": 1, 
+      "cart_id": "QlSf)Ss5Wma@EK%W7pw6VeX4b)B56rm)ate#yNm4RNI3)XgDXm", 
+      "quantity": 1
+    }
   }
 ]
