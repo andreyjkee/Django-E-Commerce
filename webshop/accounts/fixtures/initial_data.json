@@ -3,20 +3,20 @@
     "pk": 1, 
     "model": "accounts.userprofile", 
     "fields": {
-      "billing_country": "sdfff", 
-      "shipping_name": "dsdsgds", 
-      "billing_address": "fdsfsdf", 
-      "shipping_city": "dsadsad", 
-      "shipping_zip": "325324", 
-      "billing_name": "dsffdsfs", 
-      "shipping_address_1": "sdasdasd", 
-      "phone": "555-555-5555", 
-      "billing_zip": "532524", 
+      "billing_country": "\u0420\u043e\u0441\u0441\u0438\u044f", 
+      "shipping_name": "\u0418\u0432\u0430\u043d\u043e\u0432 \u0418\u0432\u0430\u043d \u0418\u0432\u0430\u043d\u043e\u0432\u0438\u0447", 
+      "billing_address": "\u0443\u043b. \u0413\u0430\u0433\u0430\u0440\u0438\u043d\u0430 16", 
+      "shipping_city": "\u0412\u043e\u0440\u043e\u043d\u0435\u0436", 
+      "shipping_zip": "394000", 
+      "billing_name": "\u0418\u0432\u0430\u043d\u043e\u0432 \u0418\u0432\u0430\u043d \u0418\u0432\u0430\u043d\u043e\u0432\u0438\u0447", 
+      "shipping_address_1": "\u0443\u043b. \u0413\u0430\u0433\u0430\u0440\u0438\u043d\u0430 16", 
+      "phone": "555-555-5551", 
+      "billing_zip": "394000", 
       "user": 1, 
-      "shipping_country": "ewfwefewf", 
-      "email": "andreyjkee@gmail.com", 
-      "shipping_address_2": "gdsgds", 
-      "billing_city": "fsdfdsf"
+      "shipping_country": "\u0420\u043e\u0441\u0441\u0438\u044f", 
+      "email": "ivanivanov@gmail.com", 
+      "shipping_address_2": "\u0434\u043e\u043c 3 \u043a\u043e\u0440\u043f\u0443\u0441 1 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 87", 
+      "billing_city": "\u0412\u043e\u0440\u043e\u043d\u0435\u0436"
     }
   }
 ]

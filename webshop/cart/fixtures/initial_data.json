@@ -38,5 +38,25 @@
       "cart_id": "QlSf)Ss5Wma@EK%W7pw6VeX4b)B56rm)ate#yNm4RNI3)XgDXm", 
       "quantity": 1
     }
+  }, 
+  {
+    "pk": 5, 
+    "model": "cart.cartitem", 
+    "fields": {
+      "date_added": "2012-05-13T21:33:56.227", 
+      "product": 1, 
+      "cart_id": "uKHlOrL!xX4iJf(hZ&9C4bFqZqBr*O!SxiufnyNdFR*W4$T24J", 
+      "quantity": 2
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "cart.cartitem", 
+    "fields": {
+      "date_added": "2012-05-14T16:26:14.572", 
+      "product": 2, 
+      "cart_id": "uKHlOrL!xX4iJf(hZ&9C4bFqZqBr*O!SxiufnyNdFR*W4$T24J", 
+      "quantity": 333
+    }
   }
 ]

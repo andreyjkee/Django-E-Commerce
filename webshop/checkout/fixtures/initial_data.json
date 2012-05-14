@@ -31,7 +31,17 @@
       "product": 2, 
       "order": 1, 
       "price": "22", 
-      "quantity": 1
+      "quantity": 2
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "checkout.orderitem", 
+    "fields": {
+      "product": 1, 
+      "order": 1, 
+      "price": "2141", 
+      "quantity": 5
     }
   }
 ]
