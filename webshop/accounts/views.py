@@ -14,6 +14,7 @@ from webshop.checkout.models import Order, OrderItem
 from webshop.accounts.forms import UserProfileForm
 from webshop.accounts import profile
 
+
 @csrf_protect
 def register_view(request, template_name="registration/login.html"):
     """Регистрация нового пользователя"""
