@@ -3,7 +3,6 @@
 *.project
 *.pydevproject
 *.prefs
-*.xml
 
 # Compiled source #
 ###################
