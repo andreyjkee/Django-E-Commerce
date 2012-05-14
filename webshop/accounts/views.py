@@ -66,9 +66,9 @@ def order_info_view(request, template_name="registration/order_info.html"):
             profile.set(request)
             url = urlresolvers.reverse('my_account')
             return HttpResponseRedirect(url)
-        else:
-            user_profile = profile.retrieve(request)
-            form = UserProfileForm(instance=user_profile)
+    else:
+        user_profile = profile.retrieve(request)
+        form = UserProfileForm(instance=user_profile)
     page_title = _(u'Edit Order Information')
     return render_to_response(template_name, locals(),
                                   context_instance=RequestContext(request))
