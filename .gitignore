@@ -12,25 +12,21 @@
 *.exe
 *.o
 *.so
-*.pyc
+*.py[co]
 
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
-*.7z
+*.[7g]z
 *.dmg
-*.gz
 *.iso
-*.jar
-*.rar
-*.tar
+*.[jrt]ar
 *.zip
 
 # Logs and databases #
 ######################
 *.log
-*.txt
 
 # OS generated files #
 ######################
