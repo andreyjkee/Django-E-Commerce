@@ -4,7 +4,7 @@
 {% block content %}
 	<h2>{% trans "Welcome to our shop!" %}</h2>
   {% if news %}
-  <h3><div class="breadcrumb">{% trans "News" %}</div></h3>
+    <div class="breadcrumb"><h3>{% trans "News" %}</h3></div>
     <div class="well">
     {% for n in news %}
       <h4><a href="{{ n.get_absolute_url }}">{{ n.header }}</a></h4>
