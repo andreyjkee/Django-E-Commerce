@@ -65,7 +65,7 @@ div.cart_box a{
 }
 #footer{
     clear: both;
-    background-color: #98AC5E;
+    background-color: #0088CC;
     color: White;
     text-align: center;
 }
@@ -78,16 +78,16 @@ ul.errorlist{
     background-color: Red;
     color: White;
 }
-h3{
-    background-color: #98AC5E;
+/*h3{*/
+    /*background-color: #0088CC;*/
+    /*color: White;*/
+    /*padding: 3px;*/
+    /*margin-bottom: 6px;*/
+/*}*/
+div#footer a{
     color: White;
-    padding: 3px;
-    margin-bottom: 6px;
-}
-div#footer a{ 
-    color: White; 
-    font-size: small; 
+    font-size: small;
     text-decoration: underline;
-    font-weight: normal; 
-    margin-right: 10px; 
+    font-weight: normal;
+    margin-right: 10px;
 }

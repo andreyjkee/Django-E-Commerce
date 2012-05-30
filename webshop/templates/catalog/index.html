@@ -4,18 +4,18 @@
 {% block content %}
 	<h2>{% trans "Welcome to our shop!" %}</h2>
   {% if news %}
-  <h3>{% trans "News" %}</h3>
+  <h3><div class="breadcrumb">{% trans "News" %}</div></h3>
     <div class="well">
     {% for n in news %}
       <h4><a href="{{ n.get_absolute_url }}">{{ n.header }}</a></h4>
       <i class="icon-time"></i>&nbsp;{{ n.created|date:"h:m, j F Y" }}<br />
       <div class="alert alert-info">
-      {{ n.body }}</div>
+      {{ n.body|safe }}</div>
     {% endfor %}
     </div>
   {% endif %}
   {% if products %}
-    <h3>{% trans "Feautured products" %}</h3><br />
+    <h3><div class="breadcrumb">{% trans "Feautured products" %}</div></h3><br />
     {% for p in products %}
       <div class="product_thumbnail">
         <a href="{{ p.get_absolute_url }}">
