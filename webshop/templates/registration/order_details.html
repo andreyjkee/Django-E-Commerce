@@ -8,6 +8,7 @@
 		</caption>
 		<thead>
 		<tr>
+      <th scope="col"></th>
 			<th scope="col">{% trans "Name" %}</th>
 			<th scope="col">{% trans "Price" %}</th>
 			<th scope="col">{% trans "Quantity" %}</th>
@@ -17,20 +18,21 @@
 		<tbody>
 		{% for item in order_items %}
       <tr>
+      <td>
+        {{ forloop.counter }}
+      </td>
 			<td>
-				<a href="{{ item.get_absolute_url }}">
-					{{ item.name }}
-				</a>
+				<a href="{{ item.get_absolute_url }}">{{ item.name }}</a>
 			</td>
 			<td>{{ item.price }} руб.</td>
 			<td>{{ item.quantity }}</td>
-			<td class="right">{{ item.total }} руб.</td>
+			<td style="text-align: right">{{ item.total }} руб.</td>
 		</tr>
     {% endfor %}
 		</tbody>
   	<tfoot>
 			<tr>
-				<td colspan="4" class="right" style="height:30px; text-align: right">
+				<td colspan="5" class="right" style="height:30px; text-align: right">
 				{% trans "Order Total" %}: {{ order.total }} руб.
 				</td>
 			</tr>
