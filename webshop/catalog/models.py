@@ -125,7 +125,7 @@ class ProductImage(models.Model):
 
 class CharacteristicType(models.Model):
     """Словарная таблица характеристик продуктов"""
-    name = models.CharField(_(u'Name'), max_length=255, unique=True)
+    name = models.CharField(_(u'Name'), max_length=255)
 
     class Meta:
         db_table = 'characteristics_type'
@@ -149,4 +149,4 @@ class Characteristic(models.Model):
         ordering = ['characteristic_type', 'value']
         verbose_name_plural = _(u'Characteristics')
         # составной ключ, для избежания повторения одинковых характеристик у продукта
-        unique_together = ('product', 'characteristic_type',)
+        unique_together = (('product', 'characteristic_type'),)

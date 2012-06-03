@@ -7,7 +7,6 @@ from django.db import models
 from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
 
-
 from webshop.catalog.models import Product
 
 
