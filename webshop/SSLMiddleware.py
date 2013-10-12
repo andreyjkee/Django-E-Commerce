@@ -8,10 +8,10 @@ from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect, get
 
 SSL = 'SSL'
 
-class SSLRedirect:
+class SSLRedirect(object):
     """ middleware class for handling redirects back and forth between secure and non-secure pages.
     Taken from: http://www.djangosnippets.org/snippets/880/
-    
+
     """
     def process_view(self, request, view_func, view_args, view_kwargs):
         if SSL in view_kwargs:
@@ -25,12 +25,12 @@ class SSLRedirect:
 
     def _is_secure(self, request):
         if request.is_secure():
-	    return True
+            return True
 
         #Handle the Webfaction case until this gets resolved in the request.is_secure()
         if 'HTTP_X_FORWARDED_SSL' in request.META:
             return request.META['HTTP_X_FORWARDED_SSL'] == 'on'
-        
+
         return False
 
     def _redirect(self, request, secure):

@@ -123,7 +123,7 @@ MIDDLEWARE_CLASSES = (
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'webshop.SSLMiddleware.SSLRedirect',
+    #'webshop.SSLMiddleware.SSLRedirect',
 )
 
 ROOT_URLCONF = 'webshop.urls'
@@ -203,3 +203,8 @@ LOGIN_REDIRECT_URL = '/accounts/my_account/'
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 90 # 90 дней на хранение cookies
 PRODUCTS_PER_PAGE = 1
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
